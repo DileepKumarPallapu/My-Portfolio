@@ -1,0 +1,1524 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pallapu Dileep Kumar | CSE Student, Full-Stack Developer & AI Enthusiast</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Personal Portfolio Website of Pallapu Dileep Kumar, a Computer Science and Engineering student at Vel Tech University. Full-Stack Developer, Java & Spring Boot Developer, AI Enthusiast.">
+  <meta name="keywords" content="Pallapu Dileep Kumar, Dileep Kumar, CSE Student, Vel Tech, Full-Stack Developer, Java Developer, Spring Boot, Portfolio, AI Enthusiast, Software Engineer">
+  <meta name="author" content="Pallapu Dileep Kumar">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="assets/images/profile.jpg">
+
+  <!-- OpenGraph Social Preview Meta Tags -->
+  <meta property="og:title" content="Pallapu Dileep Kumar | Full-Stack Developer & AI Enthusiast Portfolio">
+  <meta property="og:description" content="Explore the portfolio of Pallapu Dileep Kumar - CSE Student at Vel Tech, Full-Stack Java/Spring Boot Developer, AI Enthusiast with 15+ Industry Certifications and 6 Internship tracks.">
+  <meta property="og:image" content="assets/images/profile.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- FontAwesome Icons & Google Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+
+  <!-- ==========================================
+       Header / Navbar
+       ========================================== -->
+  <header class="navbar">
+    <div class="container">
+      <a href="#hero" class="nav-logo">
+        <div class="logo-badge"><img src="assets/images/profile.jpg" alt="Pallapu Dileep Kumar Profile"></div>
+        <span>Dileep Kumar</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#certifications" class="nav-link">Certifications</a></li>
+        <li><a href="#resume" class="nav-link">Resume</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme">
+          <i class="fas fa-sun"></i>
+        </button>
+        <button id="hamburger" class="hamburger" aria-label="Open Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="mobile-menu">
+      <a href="#hero" class="nav-link">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#education" class="nav-link">Education</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#experience" class="nav-link">Experience</a>
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#certifications" class="nav-link">Certifications</a>
+      <a href="#resume" class="nav-link">Resume</a>
+      <a href="#github" class="nav-link">GitHub</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       Hero Section
+       ========================================== -->
+  <section id="hero" class="hero">
+    <canvas id="hero-canvas"></canvas>
+    
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="pulse-dot"></span>
+          <span>Available for New Opportunities</span>
+        </div>
+
+        <h1 class="hero-title">
+          Hi, I'm <br>
+          <span class="gradient-text">Pallapu Dileep Kumar</span>
+        </h1>
+
+        <div class="typing-container">
+          <span id="typing-text" class="typing-text"></span>
+        </div>
+
+        <p class="hero-description">
+          A passionate Computer Science and Engineering student at Vel Tech University dedicated to engineering high-impact software solutions, robust full-stack web applications, and intelligent AI-powered systems.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">
+            <i class="fas fa-rocket"></i> View Projects
+          </a>
+          <a href="https://drive.google.com/file/d/1vRaKKRLEVEdEUkuS7hOEMboNMMeevOyO/view?usp=drivesdk" target="_blank" class="btn btn-secondary">
+            <i class="fas fa-file-download"></i> Download Resume
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            <i class="fas fa-paper-plane"></i> Contact Me
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="profile-frame">
+          <div class="profile-img-wrapper">
+            <img src="assets/images/profile.jpg" alt="Pallapu Dileep Kumar Profile Picture">
+          </div>
+
+          <!-- Floating Badges -->
+          <div class="floating-badge fb-1">
+            <i class="fab fa-java" style="color: #f89820;"></i>
+            <span>Java & Spring Boot</span>
+          </div>
+          <div class="floating-badge fb-2">
+            <i class="fab fa-react" style="color: #61dafb;"></i>
+            <span>React & Front-End</span>
+          </div>
+          <div class="floating-badge fb-3">
+            <i class="fas fa-brain" style="color: #a855f7;"></i>
+            <span>AI Enthusiast</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       About Me Section
+       ========================================== -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge"><i class="fas fa-user-astronaut"></i> Biography</span>
+        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+        <p class="section-subtitle">Driven by curiosity, fueled by code, and aiming for continuous innovation in software engineering.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text-content">
+          <p class="about-bio">
+            I am a Computer Science and Engineering (CSE) student at <strong>Vel Tech Rangarajan Dr. Sagunthala R&D Institute of Science and Technology</strong> with a strong passion for software engineering, modern web technologies, and artificial intelligence.
+          </p>
+          <p class="about-bio">
+            My journey includes hands-on experience gained through internships at <strong>Infinity Connects Media</strong> and <strong>Qskills</strong>, where I developed responsive user interfaces, sharpened back-end API integrations, and collaborated within agile development teams.
+          </p>
+          <p class="about-bio">
+            I thrive on learning cutting-edge technologies, solving complex algorithmic challenges, and exploring domains like <strong>Cloud Computing</strong> and <strong>Cybersecurity</strong>. My ultimate goal is to grow into an extraordinary Software Engineer creating scalable, high-performance global systems.
+          </p>
+
+          <div class="about-highlights">
+            <div class="highlight-box glass-card">
+              <div class="highlight-icon"><i class="fas fa-code-branch"></i></div>
+              <div class="highlight-info">
+                <h4>Full-Stack Mastery</h4>
+                <p>Spring Boot, React & Modern Web APIs</p>
+              </div>
+            </div>
+
+            <div class="highlight-box glass-card">
+              <div class="highlight-icon"><i class="fas fa-robot"></i></div>
+              <div class="highlight-info">
+                <h4>AI & Machine Learning</h4>
+                <p>NLP, Chatbots & Speech Recognition</p>
+              </div>
+            </div>
+
+            <div class="highlight-box glass-card">
+              <div class="highlight-icon"><i class="fas fa-graduation-cap"></i></div>
+              <div class="highlight-info">
+                <h4>Continuous Learner</h4>
+                <p>B.Tech CSE at Vel Tech (2024–2028)</p>
+              </div>
+            </div>
+
+            <div class="highlight-box glass-card">
+              <div class="highlight-icon"><i class="fas fa-shield-alt"></i></div>
+              <div class="highlight-info">
+                <h4>Cloud & Cyber Interest</h4>
+                <p>Secure Architecture & Scalable Infra</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       Education Section
+       ========================================== -->
+  <section id="education">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge"><i class="fas fa-graduation-cap"></i> Academic Journey</span>
+        <h2 class="section-title">My <span class="gradient-text">Education</span></h2>
+        <p class="section-subtitle">Academic foundations shaping my analytical thinking and software engineering principles.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-node"><i class="fas fa-university"></i></div>
+          <div class="timeline-content glass-card">
+            <span class="timeline-date"><i class="far fa-calendar-alt"></i> 2024 - 2028</span>
+            <h3 class="timeline-title">Bachelor of Technology (B.Tech)</h3>
+            <h4 class="timeline-subtitle" style="margin-top: 0.3rem;">Computer Science and Engineering (CSE)</h4>
+            <p style="display: flex; align-items: center; gap: 0.6rem; margin-top: 0.5rem; color: #38bdf8; font-weight: 600; font-size: 0.95rem; flex-wrap: wrap;">
+              <img src="assets/images/companies/veltech_logo.jpg" alt="Vel Tech Logo" style="height: 34px; width: 34px; object-fit: contain; border-radius: 50%; background: #ffffff; padding: 2px; border: 1.5px solid rgba(220, 38, 38, 0.5); box-shadow: 0 2px 8px rgba(0,0,0,0.3);">
+              <span>Vel Tech Rangarajan Dr. Sagunthala R&D Institute of Science and Technology</span>
+            </p>
+            <div class="timeline-details" style="margin-top: 0.8rem;">
+              <ul>
+                <li>Studying core computer science disciplines including Data Structures, Algorithms, DBMS, and Software Engineering.</li>
+                <li>Actively engaging in practical software developments, AI research initiatives, and technical projects.</li>
+                <li>Maintaining strong academic focus alongside industry internship experiences.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       Skills Section
+       ========================================== -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge"><i class="fas fa-tools"></i> Technical Expertise</span>
+        <h2 class="section-title">Skills & <span class="gradient-text">Competencies</span></h2>
+        <p class="section-subtitle">Comprehensive showcase of technical languages, frameworks, developer tools, and core engineering concepts.</p>
+      </div>
+
+      <div class="skills-tabs">
+        <button class="tab-btn active" data-filter="all">All Skills</button>
+        <button class="tab-btn" data-filter="lang">Languages</button>
+        <button class="tab-btn" data-filter="frontend">Front-End</button>
+        <button class="tab-btn" data-filter="backend">Back-End</button>
+        <button class="tab-btn" data-filter="db">Databases</button>
+        <button class="tab-btn" data-filter="tools">Tools</button>
+        <button class="tab-btn" data-filter="core">Core Concepts</button>
+        <button class="tab-btn" data-filter="soft">Soft Skills</button>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Programming Languages -->
+        <div class="skill-card glass-card" data-category="lang">
+          <div class="skill-header">
+            <div class="skill-title-group">
+              <i class="fab fa-java skill-icon" style="color: #f89820;"></i>
+              <span class="skill-name">Java</span>
+            </div>
+            <span class="skill-percent">90%</span>
+          </div>
+          <div class="progress-bar-bg"><div class="progress-fill" data-percent="90"></div></div>
+        </div>
+
+        <div class="skill-card glass-card" data-category="lang">
+          <div class="skill-header">
+            <div class="skill-title-group">
+              <i class="fab fa-python skill-icon" style="color: #3776ab;"></i>
+              <span class="skill-name">Python</span>
+            </div>
+            <span class="skill-percent">85%</span>
+          </div>
+          <div class="progress-bar-bg"><div class="progress-fill" data-percent="85"></div></div>
+        </div>
+
+        <div class="skill-card glass-card" data-category="lang">
+          <div class="skill-header">
+            <div class="skill-title-group">
+              <i class="fab fa-js-square skill-icon" style="color: #f7df1e;"></i>
+              <span class="skill-name">JavaScript</span>
+            </div>
+            <span class="skill-percent">85%</span>
+          </div>
+          <div class="progress-bar-bg"><div class="progress-fill" data-percent="85"></div></div>
+        </div>
+
+        <div class="skill-card glass-card" data-category="lang">
+          <div class="skill-header">
+            <div class="skill-title-group">
+              <i class="fas fa-code skill-icon" style="color: #00599c;"></i>
+              <span class="skill-name">C Programming</span>
+            </div>
+            <span class="skill-percent">80%</span>
+          </div>
+          <div class="progress-bar-bg"><div class="progress-fill" data-percent="80"></div></div>
+        </div>
+
+        <!-- Front-End -->
+        <div class="skill-card glass-card" data-category="frontend">
+          <div class="skill-header">
+            <div class="skill-title-group">
+              <i class="fab fa-html5 skill-icon" style="color: #e34f26;"></i>
+              <span class="skill-name">HTML5</span>
+            </div>
+            <span class="skill-percent">95%</span>
+          </div>
+          <div class="progress-bar-bg"><div class="progress-fill" data-percent="95"></div></div>
+        </div>
+
+        <div class="skill-card glass-card" data-category="frontend">
+          <div class="skill-header">
+            <div class="skill-title-group">
+              <i class="fab fa-css3-alt skill-icon" style="color: #1572b6;"></i>
+              <span class="skill-name">CSS3</span>
+            </div>
+            <span class="skill-percent">90%</span>
+          </div>
+          <div class="progress-bar-bg"><div class="progress-fill" data-percent="90"></div></div>
+        </div>
+
+        <div class="skill-card glass-card" data-category="frontend">
+          <div class="skill-header">
+            <div class="skill-title-group">
+              <i class="fab fa-react skill-icon" style="color: #61dafb;"></i>
+              <span class="skill-name">React.js</span>
+            </div>
+            <span class="skill-percent">80%</span>
+          </div>
+          <div class="progress-bar-bg"><div class="progress-fill" data-percent="80"></div></div>
+        </div>
+
+        <div class="skill-card glass-card" data-category="frontend">
+          <div class="skill-header">
+            <div class="skill-title-group">
+              <i class="fab fa-bootstrap skill-icon" style="color: #7952b3;"></i>
+              <span class="skill-name">Bootstrap & Tailwind</span>
+            </div>
+            <span class="skill-percent">85%</span>
+          </div>
+          <div class="progress-bar-bg"><div class="progress-fill" data-percent="85"></div></div>
+        </div>
+
+        <!-- Back-End -->
+        <div class="skill-card glass-card" data-category="backend">
+          <div class="skill-header">
+            <div class="skill-title-group">
+              <i class="fas fa-leaf skill-icon" style="color: #6db33f;"></i>
+              <span class="skill-name">Spring Boot & MVC</span>
+            </div>
+            <span class="skill-percent">85%</span>
+          </div>
+          <div class="progress-bar-bg"><div class="progress-fill" data-percent="85"></div></div>
+        </div>
+
+        <div class="skill-card glass-card" data-category="backend">
+          <div class="skill-header">
+            <div class="skill-title-group">
+              <i class="fas fa-network-wired skill-icon" style="color: #3b82f6;"></i>
+              <span class="skill-name">RESTful APIs</span>
+            </div>
+            <span class="skill-percent">90%</span>
+          </div>
+          <div class="progress-bar-bg"><div class="progress-fill" data-percent="90"></div></div>
+        </div>
+
+        <!-- Databases -->
+        <div class="skill-card glass-card" data-category="db">
+          <div class="skill-header">
+            <div class="skill-title-group">
+              <i class="fas fa-database skill-icon" style="color: #00758f;"></i>
+              <span class="skill-name">MySQL</span>
+            </div>
+            <span class="skill-percent">85%</span>
+          </div>
+          <div class="progress-bar-bg"><div class="progress-fill" data-percent="85"></div></div>
+        </div>
+
+        <div class="skill-card glass-card" data-category="db">
+          <div class="skill-header">
+            <div class="skill-title-group">
+              <i class="fas fa-server skill-icon" style="color: #47a248;"></i>
+              <span class="skill-name">MongoDB</span>
+            </div>
+            <span class="skill-percent">75%</span>
+          </div>
+          <div class="progress-bar-bg"><div class="progress-fill" data-percent="75"></div></div>
+        </div>
+
+        <!-- Tools -->
+        <div class="skill-card glass-card" data-category="tools">
+          <div class="skill-header">
+            <div class="skill-title-group">
+              <i class="fab fa-git-alt skill-icon" style="color: #f05032;"></i>
+              <span class="skill-name">Git & GitHub</span>
+            </div>
+            <span class="skill-percent">90%</span>
+          </div>
+          <div class="progress-bar-bg"><div class="progress-fill" data-percent="90"></div></div>
+        </div>
+
+        <div class="skill-card glass-card" data-category="tools">
+          <div class="skill-header">
+            <div class="skill-title-group">
+              <i class="fas fa-laptop-code skill-icon" style="color: #007acc;"></i>
+              <span class="skill-name">IDEs (VS Code, IntelliJ, Eclipse)</span>
+            </div>
+            <span class="skill-percent">95%</span>
+          </div>
+          <div class="progress-bar-bg"><div class="progress-fill" data-percent="95"></div></div>
+        </div>
+
+        <!-- Core Concepts -->
+        <div class="skill-card glass-card" data-category="core">
+          <div class="skill-header">
+            <div class="skill-title-group">
+              <i class="fas fa-sitemap skill-icon" style="color: #8b5cf6;"></i>
+              <span class="skill-name">Data Structures & Algorithms</span>
+            </div>
+            <span class="skill-percent">85%</span>
+          </div>
+          <div class="progress-bar-bg"><div class="progress-fill" data-percent="85"></div></div>
+        </div>
+
+        <div class="skill-card glass-card" data-category="core">
+          <div class="skill-header">
+            <div class="skill-title-group">
+              <i class="fas fa-cubes skill-icon" style="color: #06b6d4;"></i>
+              <span class="skill-name">OOPs & DBMS Concepts</span>
+            </div>
+            <span class="skill-percent">90%</span>
+          </div>
+          <div class="progress-bar-bg"><div class="progress-fill" data-percent="90"></div></div>
+        </div>
+
+        <!-- Soft Skills -->
+        <div class="skill-card glass-card" data-category="soft">
+          <div class="skill-header">
+            <div class="skill-title-group">
+              <i class="fas fa-lightbulb skill-icon" style="color: #f59e0b;"></i>
+              <span class="skill-name">Problem Solving & Adaptability</span>
+            </div>
+            <span class="skill-percent">95%</span>
+          </div>
+          <div class="progress-bar-bg"><div class="progress-fill" data-percent="95"></div></div>
+        </div>
+
+        <div class="skill-card glass-card" data-category="soft">
+          <div class="skill-header">
+            <div class="skill-title-group">
+              <i class="fas fa-users skill-icon" style="color: #10b981;"></i>
+              <span class="skill-name">Teamwork & Communication</span>
+            </div>
+            <span class="skill-percent">92%</span>
+          </div>
+          <div class="progress-bar-bg"><div class="progress-fill" data-percent="92"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       Work Experience Section
+       ========================================== -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge"><i class="fas fa-briefcase"></i> Career Path</span>
+        <h2 class="section-title">Work <span class="gradient-text">Experience</span></h2>
+        <p class="section-subtitle">Practical industry exposure gained through internships and technical development programs.</p>
+      </div>
+
+      <div class="timeline">
+        <!-- 1. Cisco Networking Academy -->
+        <div class="timeline-item">
+          <div class="timeline-node"><i class="fas fa-shield-alt"></i></div>
+          <div class="timeline-content glass-card">
+            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.4rem;">
+              <span class="timeline-date"><i class="far fa-calendar-alt"></i> Jun 2026 - Present · 2 mos</span>
+              <span style="font-size: 0.8rem; background: rgba(56, 189, 248, 0.15); color: #38bdf8; padding: 0.2rem 0.6rem; border-radius: var(--radius-full); border: 1px solid rgba(56, 189, 248, 0.3);"><i class="fas fa-globe"></i> Remote</span>
+            </div>
+            <h3 class="timeline-title">Cybersecurity Intern / Cybersecurity Trainee</h3>
+            <h4 class="timeline-subtitle" style="display: flex; align-items: center; gap: 0.6rem; margin-top: 0.4rem;">
+              <img src="assets/images/companies/cisco_logo.png" alt="Cisco Logo" style="height: 34px; width: auto; object-fit: contain; background: #ffffff; padding: 2px 8px; border-radius: 6px; border: 1px solid rgba(56, 189, 248, 0.4); box-shadow: 0 2px 8px rgba(0,0,0,0.3);">
+              <span>Cisco Networking Academy</span>
+            </h4>
+            <div class="timeline-details" style="margin-top: 0.8rem;">
+              <ul>
+                <li>Gained foundational knowledge in cybersecurity, focusing on network security architectures and defense best practices.</li>
+                <li>Developed practical skills in cyber defense, threat intelligence, online safety, and data protection techniques.</li>
+                <li>Strengthened analytical and problem-solving abilities through real-world cybersecurity scenarios, firewall rules, and ACL configurations.</li>
+              </ul>
+              <div style="margin-top: 0.8rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <span class="tech-badge-item" style="font-size: 0.75rem; padding: 0.2rem 0.6rem;"><i class="fas fa-lock"></i> Cybersecurity</span>
+                <span class="tech-badge-item" style="font-size: 0.75rem; padding: 0.2rem 0.6rem;"><i class="fas fa-network-wired"></i> Network Security</span>
+                <span class="tech-badge-item" style="font-size: 0.75rem; padding: 0.2rem 0.6rem;"><i class="fas fa-user-shield"></i> Threat Defense</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. QSkill (Multi-Track) -->
+        <div class="timeline-item">
+          <div class="timeline-node"><i class="fas fa-code-branch"></i></div>
+          <div class="timeline-content glass-card">
+            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.4rem;">
+              <span class="timeline-date"><i class="far fa-calendar-alt"></i> Internship Program · 10 mos Total</span>
+            </div>
+            <h3 class="timeline-title">Software & AI Development Intern</h3>
+            <h4 class="timeline-subtitle" style="display: flex; align-items: center; gap: 0.6rem; margin-top: 0.4rem;">
+              <img src="assets/images/companies/qskill_logo.png" alt="QSkill Logo" style="height: 34px; width: auto; object-fit: contain; background: #ffffff; padding: 2px 8px; border-radius: 6px; border: 1px solid rgba(168, 85, 247, 0.4); box-shadow: 0 2px 8px rgba(0,0,0,0.3);">
+              <span>QSkill</span>
+            </h4>
+            
+            <div class="timeline-details" style="margin-top: 1rem; display: flex; flex-direction: column; gap: 1rem;">
+              <!-- Track A -->
+              <div style="background: rgba(255,255,255,0.02); border-left: 3px solid #a855f7; padding: 0.8rem 1rem; border-radius: 0 var(--radius-sm) var(--radius-sm) 0;">
+                <div style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+                  <strong style="color: var(--text-primary); font-size: 1rem;">Python Developer Track</strong>
+                  <span style="font-size: 0.8rem; color: var(--accent-purple);">Jun 2026 - Jul 2026 · 2 mos (Remote)</span>
+                </div>
+                <p style="font-size: 0.88rem; color: var(--text-secondary); margin-top: 0.4rem; line-height: 1.5;">
+                  Engineered concurrent Python scripts, multithreaded backend routines, automated data handling pipelines, and object-oriented modules.
+                </p>
+              </div>
+
+              <!-- Track B -->
+              <div style="background: rgba(255,255,255,0.02); border-left: 3px solid #3b82f6; padding: 0.8rem 1rem; border-radius: 0 var(--radius-sm) var(--radius-sm) 0;">
+                <div style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+                  <strong style="color: var(--text-primary); font-size: 1rem;">Front-End Development Track</strong>
+                  <span style="font-size: 0.8rem; color: #60a5fa;">Feb 2026 - May 2026 · 4 mos (Navi Mumbai · On-site)</span>
+                </div>
+                <p style="font-size: 0.88rem; color: var(--text-secondary); margin-top: 0.4rem; line-height: 1.5;">
+                  Designed responsive web user interfaces, reusable front-end components, cross-browser compatibility features, and interactive UI logic using HTML5, CSS3, and JavaScript.
+                </p>
+              </div>
+
+              <!-- Track C -->
+              <div style="background: rgba(255,255,255,0.02); border-left: 3px solid #10b981; padding: 0.8rem 1rem; border-radius: 0 var(--radius-sm) var(--radius-sm) 0;">
+                <div style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+                  <strong style="color: var(--text-primary); font-size: 1rem;">AI / Machine Learning Track</strong>
+                  <span style="font-size: 0.8rem; color: #34d399;">Oct 2025 - Jan 2026 · 4 mos (Navi Mumbai · On-site)</span>
+                </div>
+                <p style="font-size: 0.88rem; color: var(--text-secondary); margin-top: 0.4rem; line-height: 1.5;">
+                  Trained on foundational artificial intelligence algorithms, machine learning model architectures, dataset preprocessing, and intelligent predictive system workflows.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Infinity Connects Media -->
+        <div class="timeline-item">
+          <div class="timeline-node"><i class="fas fa-desktop"></i></div>
+          <div class="timeline-content glass-card">
+            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.4rem;">
+              <span class="timeline-date"><i class="far fa-calendar-alt"></i> Jun 2026 - Jul 2026 · 2 mos</span>
+              <span style="font-size: 0.8rem; background: rgba(56, 189, 248, 0.15); color: #38bdf8; padding: 0.2rem 0.6rem; border-radius: var(--radius-full); border: 1px solid rgba(56, 189, 248, 0.3);"><i class="fas fa-map-marker-alt"></i> Visakhapatnam · On-site</span>
+            </div>
+            <h3 class="timeline-title">Web Development Summer Intern</h3>
+            <h4 class="timeline-subtitle" style="display: flex; align-items: center; gap: 0.6rem; margin-top: 0.4rem;">
+              <img src="assets/images/companies/infinity_connects_logo.jpg" alt="Infinity Connects Media Logo" style="height: 34px; width: auto; object-fit: contain; background: #ffffff; padding: 2px 8px; border-radius: 6px; border: 1px solid rgba(56, 189, 248, 0.4); box-shadow: 0 2px 8px rgba(0,0,0,0.3);">
+              <span>Infinity Connects Media</span>
+            </h4>
+            <div class="timeline-details" style="margin-top: 0.8rem;">
+              <ul>
+                <li>Developed responsive web pages ensuring seamless user experience and cross-device optimization.</li>
+                <li>Improved front-end web UI components utilizing HTML5, CSS3, modern JavaScript, and design systems.</li>
+                <li>Collaborated closely with cross-functional design and engineering teams to deliver production-ready web interfaces.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. SkillCraft Technology -->
+        <div class="timeline-item">
+          <div class="timeline-node"><i class="fas fa-robot"></i></div>
+          <div class="timeline-content glass-card">
+            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.4rem;">
+              <span class="timeline-date"><i class="far fa-calendar-alt"></i> Jun 2026 · 1 mo</span>
+              <span style="font-size: 0.8rem; background: rgba(168, 85, 247, 0.15); color: #a855f7; padding: 0.2rem 0.6rem; border-radius: var(--radius-full); border: 1px solid rgba(168, 85, 247, 0.3);"><i class="fas fa-globe"></i> Remote</span>
+            </div>
+            <h3 class="timeline-title">Prompt Engineer Intern</h3>
+            <h4 class="timeline-subtitle" style="display: flex; align-items: center; gap: 0.6rem; margin-top: 0.4rem;">
+              <img src="assets/images/companies/skillcraft_logo.png" alt="SkillCraft Logo" style="height: 34px; width: auto; object-fit: contain; background: #ffffff; padding: 2px 8px; border-radius: 6px; border: 1px solid rgba(168, 85, 247, 0.4); box-shadow: 0 2px 8px rgba(0,0,0,0.3);">
+              <span>SkillCraft Technology</span>
+            </h4>
+            <div class="timeline-details" style="margin-top: 0.8rem;">
+              <ul>
+                <li>Engineered and optimized large language model (LLM) system prompts, context management pipelines, and prompt templates.</li>
+                <li>Applied zero-shot, few-shot, and chain-of-thought prompt strategies to maximize AI output precision.</li>
+                <li>Evaluated model generation behaviors, reducing hallucination rates and tuning AI model responses.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Innoknowvex -->
+        <div class="timeline-item">
+          <div class="timeline-node"><i class="fas fa-bullhorn"></i></div>
+          <div class="timeline-content glass-card">
+            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.4rem;">
+              <span class="timeline-date"><i class="far fa-calendar-alt"></i> Jun 2026 - Jul 2026 · 2 mos</span>
+              <span style="font-size: 0.8rem; background: rgba(245, 158, 11, 0.15); color: #f59e0b; padding: 0.2rem 0.6rem; border-radius: var(--radius-full); border: 1px solid rgba(245, 158, 11, 0.3);"><i class="fas fa-building"></i> Bengaluru · Hybrid</span>
+            </div>
+            <h3 class="timeline-title">Marketing Intern</h3>
+            <h4 class="timeline-subtitle" style="display: flex; align-items: center; gap: 0.6rem; margin-top: 0.4rem;">
+              <img src="assets/images/companies/innoknowvex_logo.png" alt="Innoknowvex Logo" style="height: 34px; width: auto; object-fit: contain; background: #ffffff; padding: 2px 8px; border-radius: 6px; border: 1px solid rgba(245, 158, 11, 0.4); box-shadow: 0 2px 8px rgba(0,0,0,0.3);">
+              <span>Innoknowvex</span>
+            </h4>
+            <div class="timeline-details" style="margin-top: 0.8rem;">
+              <ul>
+                <li>Executed digital marketing initiatives, user outreach strategies, and audience engagement analysis.</li>
+                <li>Analyzed tech industry market trends to optimize promotional content and brand positioning.</li>
+                <li>Successfully completed program requirements and earned official Completion Certificate recognition.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Topgrade Innovation -->
+        <div class="timeline-item">
+          <div class="timeline-node"><i class="fas fa-brain"></i></div>
+          <div class="timeline-content glass-card">
+            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.4rem;">
+              <span class="timeline-date"><i class="far fa-calendar-alt"></i> Mar 2026 - May 2026 · 3 mos</span>
+              <span style="font-size: 0.8rem; background: rgba(16, 185, 129, 0.15); color: #10b981; padding: 0.2rem 0.6rem; border-radius: var(--radius-full); border: 1px solid rgba(16, 185, 129, 0.3);"><i class="fas fa-laptop"></i> Online</span>
+            </div>
+            <h3 class="timeline-title">Artificial Intelligence Intern</h3>
+            <h4 class="timeline-subtitle" style="display: flex; align-items: center; gap: 0.6rem; margin-top: 0.4rem;">
+              <img src="assets/images/companies/topgrade_logo.png" alt="Topgrade Innovation Logo" style="height: 34px; width: auto; object-fit: contain; background: #ffffff; padding: 2px 8px; border-radius: 6px; border: 1px solid rgba(16, 185, 129, 0.4); box-shadow: 0 2px 8px rgba(0,0,0,0.3);">
+              <span>Topgrade Innovation</span>
+            </h4>
+            <div class="timeline-details" style="margin-top: 0.8rem;">
+              <ul>
+                <li>Gained practical exposure to artificial intelligence frameworks, algorithms, and intelligent system architectures.</li>
+                <li>Constructed and evaluated predictive machine learning models using Python and data science libraries.</li>
+                <li>Researched automated data pipeline workflows for intelligent decision support applications.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       Services Section
+       ========================================== -->
+  <section id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge"><i class="fas fa-concierge-bell"></i> What I Offer</span>
+        <h2 class="section-title">My <span class="gradient-text">Services</span></h2>
+        <p class="section-subtitle">High-quality development services tailored to craft modern web apps, APIs, and AI solutions.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card glass-card">
+          <div class="service-icon-box"><i class="fas fa-desktop"></i></div>
+          <h3 class="service-title">Front-End Web Development</h3>
+          <p class="service-desc">Crafting accessible, pixel-perfect, responsive web interfaces using HTML5, CSS3, JavaScript, React.js, and Tailwind CSS.</p>
+        </div>
+
+        <div class="service-card glass-card">
+          <div class="service-icon-box"><i class="fas fa-layer-group"></i></div>
+          <h3 class="service-title">Full-Stack Application Dev</h3>
+          <p class="service-desc">Building end-to-end scalable web applications linking robust Java/Spring Boot back-ends with dynamic front-end views.</p>
+        </div>
+
+        <div class="service-card glass-card">
+          <div class="service-icon-box"><i class="fas fa-mobile-alt"></i></div>
+          <h3 class="service-title">Responsive Website Design</h3>
+          <p class="service-desc">Ensuring flawless layout performance, adaptability, and high speed across smartphones, tablets, and desktop displays.</p>
+        </div>
+
+        <div class="service-card glass-card">
+          <div class="service-icon-box"><i class="fas fa-network-wired"></i></div>
+          <h3 class="service-title">REST API Development</h3>
+          <p class="service-desc">Designing secure, well-structured RESTful web services and API endpoints utilizing Spring Boot and Spring MVC.</p>
+        </div>
+
+        <div class="service-card glass-card">
+          <div class="service-icon-box"><i class="fas fa-database"></i></div>
+          <h3 class="service-title">Database Design & Integration</h3>
+          <p class="service-desc">Structuring efficient relational (MySQL) and NoSQL (MongoDB) schemas, ORM mapping (Spring Data JPA), and query tuning.</p>
+        </div>
+
+        <div class="service-card glass-card">
+          <div class="service-icon-box"><i class="fas fa-robot"></i></div>
+          <h3 class="service-title">AI-Powered Applications</h3>
+          <p class="service-desc">Integrating NLP, speech recognition models, and intelligent chatbot algorithms into accessible web solutions.</p>
+        </div>
+
+        <div class="service-card glass-card">
+          <div class="service-icon-box"><i class="fas fa-id-card"></i></div>
+          <h3 class="service-title">Portfolio Web Development</h3>
+          <p class="service-desc">Building impressive personal brand showcase sites with futuristic glassmorphism visuals and high conversion appeal.</p>
+        </div>
+
+        <div class="service-card glass-card">
+          <div class="service-icon-box"><i class="fas fa-wrench"></i></div>
+          <h3 class="service-title">Website Maintenance</h3>
+          <p class="service-desc">Ongoing updates, performance optimization, vulnerability patches, and content management support.</p>
+        </div>
+
+        <div class="service-card glass-card">
+          <div class="service-icon-box"><i class="fas fa-bug"></i></div>
+          <h3 class="service-title">Software Testing & Debugging</h3>
+          <p class="service-desc">Conducting meticulous bug tracking, code refactoring, unit testing, and UI validation for maximum reliability.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       Featured Projects Section
+       ========================================== -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge"><i class="fas fa-project-diagram"></i> Selected Work</span>
+        <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+        <p class="section-subtitle">Real-world applications and intelligent software solutions built with clean code and modern stacks.</p>
+      </div>
+
+      <div class="project-filters">
+        <button class="tab-btn active" data-filter="all">All Projects</button>
+        <button class="tab-btn" data-filter="fullstack">Full Stack</button>
+        <button class="tab-btn" data-filter="ai">AI / NLP</button>
+        <button class="tab-btn" data-filter="frontend">Front-End</button>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1: AI-Based Voice Assistant -->
+        <div class="project-card glass-card" data-category="ai">
+          <div class="project-img-container">
+            <img src="assets/images/projects/ai_chatbot.jpg" alt="AI-Based Voice Assistant">
+            <div class="project-overlay">
+              <a href="https://github.com/DileepKumarPallapu/AI-Based-Voice-Assistant" target="_blank" class="btn btn-primary btn-sm">
+                <i class="fab fa-github"></i> GitHub Repo
+              </a>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">AI-Based Voice Assistant</h3>
+            <p class="project-desc">An intelligent Python voice assistant performing speech recognition, web search, application control, and voice responses using NLP and text-to-speech engines.</p>
+            <div class="project-tech-tags">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">SpeechRecognition</span>
+              <span class="tech-tag">pyttsx3</span>
+              <span class="tech-tag">NLP</span>
+              <span class="tech-tag">Automation</span>
+            </div>
+            <div class="project-footer">
+              <a href="https://github.com/DileepKumarPallapu/AI-Based-Voice-Assistant" target="_blank" class="project-link">
+                <i class="fab fa-github"></i> View Repository
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: AI Chatbot for Student Queries -->
+        <div class="project-card glass-card" data-category="ai">
+          <div class="project-img-container">
+            <img src="assets/images/projects/ai_chatbot.jpg" alt="AI Chatbot for Student Queries">
+            <div class="project-overlay">
+              <a href="https://github.com/DileepKumarPallapu/AI-Chatbot-for-Student-Queries" target="_blank" class="btn btn-primary btn-sm">
+                <i class="fab fa-github"></i> GitHub Repo
+              </a>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">AI Chatbot for Student Queries</h3>
+            <p class="project-desc">An AI-powered academic support chatbot answering student inquiries regarding courses, schedules, fees, and department info using NLP and rule-based decision trees.</p>
+            <div class="project-tech-tags">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">NLP</span>
+              <span class="tech-tag">Rule Engine</span>
+              <span class="tech-tag">JSON Data</span>
+              <span class="tech-tag">Conversational AI</span>
+            </div>
+            <div class="project-footer">
+              <a href="https://github.com/DileepKumarPallapu/AI-Chatbot-for-Student-Queries" target="_blank" class="project-link">
+                <i class="fab fa-github"></i> View Repository
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Iris Flower Classification -->
+        <div class="project-card glass-card" data-category="ai">
+          <div class="project-img-container">
+            <img src="assets/images/projects/iris_classification.jpg" alt="Iris Flower Classification">
+            <div class="project-overlay">
+              <a href="https://github.com/DileepKumarPallapu/Iris-Flower-Classification" target="_blank" class="btn btn-primary btn-sm">
+                <i class="fab fa-github"></i> GitHub Repo
+              </a>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Iris Flower Classification</h3>
+            <p class="project-desc">A supervised Machine Learning project classifying Iris flower species using feature scaling, EDA visualization, and Scikit-Learn classification algorithms.</p>
+            <div class="project-tech-tags">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Scikit-Learn</span>
+              <span class="tech-tag">Pandas</span>
+              <span class="tech-tag">NumPy</span>
+              <span class="tech-tag">Seaborn</span>
+              <span class="tech-tag">Machine Learning</span>
+            </div>
+            <div class="project-footer">
+              <a href="https://github.com/DileepKumarPallapu/Iris-Flower-Classification" target="_blank" class="project-link">
+                <i class="fab fa-github"></i> View Repository
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: House Price Prediction -->
+        <div class="project-card glass-card" data-category="ai">
+          <div class="project-img-container">
+            <img src="assets/images/projects/house_price.jpg" alt="House Price Prediction">
+            <div class="project-overlay">
+              <a href="https://github.com/DileepKumarPallapu/House_Price_Prediction-" target="_blank" class="btn btn-primary btn-sm">
+                <i class="fab fa-github"></i> GitHub Repo
+              </a>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">House Price Prediction Model</h3>
+            <p class="project-desc">A predictive Machine Learning model analyzing real estate features, structural attributes, and regression metrics to accurately estimate housing prices.</p>
+            <div class="project-tech-tags">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Linear Regression</span>
+              <span class="tech-tag">Scikit-Learn</span>
+              <span class="tech-tag">Pandas</span>
+              <span class="tech-tag">Data Science</span>
+            </div>
+            <div class="project-footer">
+              <a href="https://github.com/DileepKumarPallapu/House_Price_Prediction-" target="_blank" class="project-link">
+                <i class="fab fa-github"></i> View Repository
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5: Data Analysis & Visualization -->
+        <div class="project-card glass-card" data-category="ai">
+          <div class="project-img-container">
+            <img src="assets/images/projects/iris_classification.jpg" alt="Data Analysis & Visualization">
+            <div class="project-overlay">
+              <a href="https://github.com/DileepKumarPallapu/Data_Analysis" target="_blank" class="btn btn-primary btn-sm">
+                <i class="fab fa-github"></i> GitHub Repo
+              </a>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Exploratory Data Analysis (EDA)</h3>
+            <p class="project-desc">Comprehensive data analysis and statistical visualization in Jupyter Notebook utilizing Pandas, NumPy, Matplotlib, and Seaborn for dataset insights.</p>
+            <div class="project-tech-tags">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Jupyter Notebook</span>
+              <span class="tech-tag">Pandas</span>
+              <span class="tech-tag">NumPy</span>
+              <span class="tech-tag">Seaborn</span>
+              <span class="tech-tag">Matplotlib</span>
+            </div>
+            <div class="project-footer">
+              <a href="https://github.com/DileepKumarPallapu/Data_Analysis" target="_blank" class="project-link">
+                <i class="fab fa-github"></i> View Repository
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6: Smart Campus Event Management -->
+        <div class="project-card glass-card" data-category="fullstack">
+          <div class="project-img-container">
+            <img src="assets/images/projects/smart_campus.jpg" alt="Smart Campus Event Management System">
+            <div class="project-overlay">
+              <a href="https://github.com/DileepKumarPallapu" target="_blank" class="btn btn-primary btn-sm">
+                <i class="fab fa-github"></i> GitHub Repo
+              </a>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Smart Campus Event Management System</h3>
+            <p class="project-desc">Full-stack web application enabling college event scheduling, online student registrations, automated email receipts, and admin analytics dashboards.</p>
+            <div class="project-tech-tags">
+              <span class="tech-tag">Java</span>
+              <span class="tech-tag">Spring Boot</span>
+              <span class="tech-tag">Spring Data JPA</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">Thymeleaf</span>
+            </div>
+            <div class="project-footer">
+              <a href="https://github.com/DileepKumarPallapu" target="_blank" class="project-link">
+                <i class="fab fa-github"></i> View Repository
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       Certifications Section
+       ========================================== -->
+  <section id="certifications">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge"><i class="fas fa-certificate"></i> Credentials</span>
+        <h2 class="section-title">My <span class="gradient-text">Certifications</span></h2>
+        <p class="section-subtitle">Verified certifications and professional training credentials earned across technical domains.</p>
+      </div>
+
+      <div class="project-filters" style="margin-bottom: 2.5rem;">
+        <button class="tab-btn active" data-cert-filter="all"><i class="fas fa-th-large"></i> All Credentials (15)</button>
+        <button class="tab-btn" data-cert-filter="mongodb"><i class="fas fa-database"></i> MongoDB AI (4)</button>
+        <button class="tab-btn" data-cert-filter="cisco"><i class="fas fa-shield-alt"></i> Cisco & Security (6)</button>
+        <button class="tab-btn" data-cert-filter="other"><i class="fas fa-award"></i> Oracle, Infosys & Python (5)</button>
+      </div>
+
+      <div class="cert-grid">
+        <!-- 1. MongoDB Vector Search -->
+        <div class="cert-card glass-card" data-cert-category="mongodb">
+          <div class="cert-header-row">
+            <div class="cert-badge-icon" style="background: rgba(19, 170, 82, 0.12); border: 1px solid rgba(19, 170, 82, 0.3);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 1.5C12 1.5 6.75 6 6.75 12C6.75 16.5 10 20.25 11.25 22.5C11.5 22.8 11.8 23 12 23C12.2 23 12.5 22.8 12.75 22.5C14 20.25 17.25 16.5 17.25 12C17.25 6 12 1.5 12 1.5ZM12 20.5C11.1 18.5 8.75 15.25 8.75 12C8.75 7.5 12 4.2 12 4.2V20.5Z" fill="#13AA52"/>
+              </svg>
+            </div>
+            <span class="cert-issuer-badge" style="background: rgba(19, 170, 82, 0.15); color: #13aa52; border-color: rgba(19, 170, 82, 0.3);">MongoDB</span>
+          </div>
+          <h3 class="cert-title">Building AI-Powered Search with MongoDB Vector Search</h3>
+          <span class="cert-org">MongoDB</span>
+          <span class="cert-date"><i class="far fa-calendar-alt"></i> Jul 10, 2026</span>
+          <button class="btn btn-secondary btn-sm" onclick="openCertModal('Building AI-Powered Search with MongoDB Vector Search', 'MongoDB', 'Jul 10, 2026', 'Mastery in building vector search indices, embedding generation, semantic queries, and retrieval-augmented generation using MongoDB Atlas Vector Search.', 'assets/images/certs/cert_vector_search.jpg', 'https://www.credly.com/badges/1fb16b4e-573d-48d6-b1d7-b9f31a3d8a88')">
+            <i class="fas fa-eye"></i> View Certificate
+          </button>
+        </div>
+
+        <!-- 2. MongoDB AI Agents -->
+        <div class="cert-card glass-card" data-cert-category="mongodb">
+          <div class="cert-header-row">
+            <div class="cert-badge-icon" style="background: rgba(19, 170, 82, 0.12); border: 1px solid rgba(19, 170, 82, 0.3);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 1.5C12 1.5 6.75 6 6.75 12C6.75 16.5 10 20.25 11.25 22.5C11.5 22.8 11.8 23 12 23C12.2 23 12.5 22.8 12.75 22.5C14 20.25 17.25 16.5 17.25 12C17.25 6 12 1.5 12 1.5ZM12 20.5C11.1 18.5 8.75 15.25 8.75 12C8.75 7.5 12 4.2 12 4.2V20.5Z" fill="#13AA52"/>
+              </svg>
+            </div>
+            <span class="cert-issuer-badge" style="background: rgba(19, 170, 82, 0.15); color: #13aa52; border-color: rgba(19, 170, 82, 0.3);">MongoDB</span>
+          </div>
+          <h3 class="cert-title">Building AI Agents with MongoDB</h3>
+          <span class="cert-org">MongoDB</span>
+          <span class="cert-date"><i class="far fa-calendar-alt"></i> Jul 10, 2026</span>
+          <button class="btn btn-secondary btn-sm" onclick="openCertModal('Building AI Agents with MongoDB', 'MongoDB', 'Jul 10, 2026', 'Practical expertise in constructing autonomous AI agents with memory retention, tool calling, and MongoDB data persistence.', 'assets/images/certs/cert_ai_agents.jpg', 'https://www.credly.com/badges/22388cb7-58aa-4aef-b65b-88ede0236168')">
+            <i class="fas fa-eye"></i> View Certificate
+          </button>
+        </div>
+
+        <!-- 3. MongoDB RAG Apps -->
+        <div class="cert-card glass-card" data-cert-category="mongodb">
+          <div class="cert-header-row">
+            <div class="cert-badge-icon" style="background: rgba(19, 170, 82, 0.12); border: 1px solid rgba(19, 170, 82, 0.3);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 1.5C12 1.5 6.75 6 6.75 12C6.75 16.5 10 20.25 11.25 22.5C11.5 22.8 11.8 23 12 23C12.2 23 12.5 22.8 12.75 22.5C14 20.25 17.25 16.5 17.25 12C17.25 6 12 1.5 12 1.5ZM12 20.5C11.1 18.5 8.75 15.25 8.75 12C8.75 7.5 12 4.2 12 4.2V20.5Z" fill="#13AA52"/>
+              </svg>
+            </div>
+            <span class="cert-issuer-badge" style="background: rgba(19, 170, 82, 0.15); color: #13aa52; border-color: rgba(19, 170, 82, 0.3);">MongoDB</span>
+          </div>
+          <h3 class="cert-title">Building RAG Apps Using MongoDB</h3>
+          <span class="cert-org">MongoDB</span>
+          <span class="cert-date"><i class="far fa-calendar-alt"></i> Jul 10, 2026</span>
+          <button class="btn btn-secondary btn-sm" onclick="openCertModal('Building RAG Apps Using MongoDB', 'MongoDB', 'Jul 10, 2026', 'End-to-end design of Retrieval-Augmented Generation (RAG) architectures leveraging LLMs, LangChain, and MongoDB Vector Search.', 'assets/images/certs/cert_rag_apps.jpg', 'https://www.credly.com/badges/df93e5ed-da4e-483d-af8e-f42228d7dcf6')">
+            <i class="fas fa-eye"></i> View Certificate
+          </button>
+        </div>
+
+        <!-- 4. MongoDB Resilient AI Strategy -->
+        <div class="cert-card glass-card" data-cert-category="mongodb">
+          <div class="cert-header-row">
+            <div class="cert-badge-icon" style="background: rgba(19, 170, 82, 0.12); border: 1px solid rgba(19, 170, 82, 0.3);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 1.5C12 1.5 6.75 6 6.75 12C6.75 16.5 10 20.25 11.25 22.5C11.5 22.8 11.8 23 12 23C12.2 23 12.5 22.8 12.75 22.5C14 20.25 17.25 16.5 17.25 12C17.25 6 12 1.5 12 1.5ZM12 20.5C11.1 18.5 8.75 15.25 8.75 12C8.75 7.5 12 4.2 12 4.2V20.5Z" fill="#13AA52"/>
+              </svg>
+            </div>
+            <span class="cert-issuer-badge" style="background: rgba(19, 170, 82, 0.15); color: #13aa52; border-color: rgba(19, 170, 82, 0.3);">MongoDB</span>
+          </div>
+          <h3 class="cert-title">AI and Innovation: Resilient AI Strategy</h3>
+          <span class="cert-org">MongoDB</span>
+          <span class="cert-date"><i class="far fa-calendar-alt"></i> Jul 08, 2026</span>
+          <button class="btn btn-secondary btn-sm" onclick="openCertModal('AI and Innovation: How MongoDB Enables a Resilient AI Strategy', 'MongoDB', 'Jul 08, 2026', 'Strategic insights into scalable database architectures for production enterprise AI systems and fault-tolerant AI workloads.', 'assets/images/certs/cert_resilient_ai.jpg', 'https://www.credly.com/go/YkBnLqMx')">
+            <i class="fas fa-eye"></i> View Certificate
+          </button>
+        </div>
+
+        <!-- 5. Cisco Ethical Hacker -->
+        <div class="cert-card glass-card" data-cert-category="cisco">
+          <div class="cert-header-row">
+            <div class="cert-badge-icon" style="background: rgba(27, 160, 215, 0.12); border: 1px solid rgba(27, 160, 215, 0.3);">
+              <svg width="26" height="18" viewBox="0 0 24 16" fill="#38BDF8" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.2 9.4v3.8h.9V9.4h-.9zm3.8-3.4v7.2h.9V6h-.9zm3.8-2.6v9.8h.9V3.4h-.9zm3.8-3.4v13.2h.9V0h-.9zm3.8 3.4v9.8h.9V3.4h-.9zm3.8 2.6v7.2h.9V6h-.9zm3.8 3.4v3.8h.9V9.4h-.9z"/>
+              </svg>
+            </div>
+            <span class="cert-issuer-badge" style="background: rgba(27, 160, 215, 0.15); color: #38bdf8; border-color: rgba(27, 160, 215, 0.3);">Cisco</span>
+          </div>
+          <h3 class="cert-title">Ethical Hacker</h3>
+          <span class="cert-org">Cisco Networking Academy</span>
+          <span class="cert-date"><i class="far fa-calendar-alt"></i> 11 Jul 2026</span>
+          <button class="btn btn-secondary btn-sm" onclick="openCertModal('Ethical Hacker', 'Cisco Networking Academy', '11 Jul 2026', 'Comprehensive training in offensive security, vulnerability assessment, penetration testing techniques, and network defense strategies.', 'assets/images/certs/cert_ethical_hacker.jpg')">
+            <i class="fas fa-eye"></i> View Certificate
+          </button>
+        </div>
+
+        <!-- 6. Cisco Industrial Cybersecurity -->
+        <div class="cert-card glass-card" data-cert-category="cisco">
+          <div class="cert-header-row">
+            <div class="cert-badge-icon" style="background: rgba(27, 160, 215, 0.12); border: 1px solid rgba(27, 160, 215, 0.3);">
+              <svg width="26" height="18" viewBox="0 0 24 16" fill="#38BDF8" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.2 9.4v3.8h.9V9.4h-.9zm3.8-3.4v7.2h.9V6h-.9zm3.8-2.6v9.8h.9V3.4h-.9zm3.8-3.4v13.2h.9V0h-.9zm3.8 3.4v9.8h.9V3.4h-.9zm3.8 2.6v7.2h.9V6h-.9zm3.8 3.4v3.8h.9V9.4h-.9z"/>
+              </svg>
+            </div>
+            <span class="cert-issuer-badge" style="background: rgba(27, 160, 215, 0.15); color: #38bdf8; border-color: rgba(27, 160, 215, 0.3);">Cisco</span>
+          </div>
+          <h3 class="cert-title">Industrial Cybersecurity Essentials</h3>
+          <span class="cert-org">Cisco Networking Academy</span>
+          <span class="cert-date"><i class="far fa-calendar-alt"></i> 11 Jul 2026</span>
+          <button class="btn btn-secondary btn-sm" onclick="openCertModal('Industrial Cybersecurity Essentials', 'Cisco Networking Academy', '11 Jul 2026', 'Fundamentals of operational technology (OT) security, critical infrastructure protection, and industrial network threat mitigation.', 'assets/images/certs/cert_industrial_cybersecurity.jpg')">
+            <i class="fas fa-eye"></i> View Certificate
+          </button>
+        </div>
+
+        <!-- 7. Cisco AP Cybersecurity -->
+        <div class="cert-card glass-card" data-cert-category="cisco">
+          <div class="cert-header-row">
+            <div class="cert-badge-icon" style="background: rgba(27, 160, 215, 0.12); border: 1px solid rgba(27, 160, 215, 0.3);">
+              <svg width="26" height="18" viewBox="0 0 24 16" fill="#38BDF8" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.2 9.4v3.8h.9V9.4h-.9zm3.8-3.4v7.2h.9V6h-.9zm3.8-2.6v9.8h.9V3.4h-.9zm3.8-3.4v13.2h.9V0h-.9zm3.8 3.4v9.8h.9V3.4h-.9zm3.8 2.6v7.2h.9V6h-.9zm3.8 3.4v3.8h.9V9.4h-.9z"/>
+              </svg>
+            </div>
+            <span class="cert-issuer-badge" style="background: rgba(27, 160, 215, 0.15); color: #38bdf8; border-color: rgba(27, 160, 215, 0.3);">Cisco</span>
+          </div>
+          <h3 class="cert-title">AP Cybersecurity</h3>
+          <span class="cert-org">Cisco Networking Academy</span>
+          <span class="cert-date"><i class="far fa-calendar-alt"></i> 07 Jul 2026</span>
+          <button class="btn btn-secondary btn-sm" onclick="openCertModal('AP Cybersecurity', 'Cisco Networking Academy', '07 Jul 2026', 'Advanced principles of network security protocols, threat intelligence monitoring, firewall configurations, and incident response.', 'assets/images/certs/cert_ap_cybersecurity.jpg')">
+            <i class="fas fa-eye"></i> View Certificate
+          </button>
+        </div>
+
+        <!-- 8. Cisco CCNA 1 -->
+        <div class="cert-card glass-card" data-cert-category="cisco">
+          <div class="cert-header-row">
+            <div class="cert-badge-icon" style="background: rgba(27, 160, 215, 0.12); border: 1px solid rgba(27, 160, 215, 0.3);">
+              <svg width="26" height="18" viewBox="0 0 24 16" fill="#38BDF8" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.2 9.4v3.8h.9V9.4h-.9zm3.8-3.4v7.2h.9V6h-.9zm3.8-2.6v9.8h.9V3.4h-.9zm3.8-3.4v13.2h.9V0h-.9zm3.8 3.4v9.8h.9V3.4h-.9zm3.8 2.6v7.2h.9V6h-.9zm3.8 3.4v3.8h.9V9.4h-.9z"/>
+              </svg>
+            </div>
+            <span class="cert-issuer-badge" style="background: rgba(27, 160, 215, 0.15); color: #38bdf8; border-color: rgba(27, 160, 215, 0.3);">Cisco</span>
+          </div>
+          <h3 class="cert-title">CCNA 1: Introduction to Networks</h3>
+          <span class="cert-org">Cisco Networking Academy</span>
+          <span class="cert-date"><i class="far fa-calendar-alt"></i> 04 Apr 2026</span>
+          <button class="btn btn-secondary btn-sm" onclick="openCertModal('CCNA 1: Introduction to Networks', 'Cisco Networking Academy', '04 Apr 2026', 'Foundational knowledge of network architectures, models (OSI & TCP/IP), IPv4/IPv6 addressing, media, and basic router/switch configuration.', 'assets/images/certs/cert_ccna_1.jpg')">
+            <i class="fas fa-eye"></i> View Certificate
+          </button>
+        </div>
+
+        <!-- 9. Cisco CCNA 2 -->
+        <div class="cert-card glass-card" data-cert-category="cisco">
+          <div class="cert-header-row">
+            <div class="cert-badge-icon" style="background: rgba(27, 160, 215, 0.12); border: 1px solid rgba(27, 160, 215, 0.3);">
+              <svg width="26" height="18" viewBox="0 0 24 16" fill="#38BDF8" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.2 9.4v3.8h.9V9.4h-.9zm3.8-3.4v7.2h.9V6h-.9zm3.8-2.6v9.8h.9V3.4h-.9zm3.8-3.4v13.2h.9V0h-.9zm3.8 3.4v9.8h.9V3.4h-.9zm3.8 2.6v7.2h.9V6h-.9zm3.8 3.4v3.8h.9V9.4h-.9z"/>
+              </svg>
+            </div>
+            <span class="cert-issuer-badge" style="background: rgba(27, 160, 215, 0.15); color: #38bdf8; border-color: rgba(27, 160, 215, 0.3);">Cisco</span>
+          </div>
+          <h3 class="cert-title">CCNA 2: Switching, Routing, and Wireless Essentials</h3>
+          <span class="cert-org">Cisco Networking Academy</span>
+          <span class="cert-date"><i class="far fa-calendar-alt"></i> 30 Jun 2026</span>
+          <button class="btn btn-secondary btn-sm" onclick="openCertModal('CCNA 2: Switching, Routing, and Wireless Essentials', 'Cisco Networking Academy', '30 Jun 2026', 'VLANs, STP, EtherChannel, DHCPv4/v6, SLAAC, routing concepts, static routing, and WLAN security implementation.', 'assets/images/certs/cert_ccna_2.jpg')">
+            <i class="fas fa-eye"></i> View Certificate
+          </button>
+        </div>
+
+        <!-- 10. Cisco CCNA 3 -->
+        <div class="cert-card glass-card" data-cert-category="cisco">
+          <div class="cert-header-row">
+            <div class="cert-badge-icon" style="background: rgba(27, 160, 215, 0.12); border: 1px solid rgba(27, 160, 215, 0.3);">
+              <svg width="26" height="18" viewBox="0 0 24 16" fill="#38BDF8" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.2 9.4v3.8h.9V9.4h-.9zm3.8-3.4v7.2h.9V6h-.9zm3.8-2.6v9.8h.9V3.4h-.9zm3.8-3.4v13.2h.9V0h-.9zm3.8 3.4v9.8h.9V3.4h-.9zm3.8 2.6v7.2h.9V6h-.9zm3.8 3.4v3.8h.9V9.4h-.9z"/>
+              </svg>
+            </div>
+            <span class="cert-issuer-badge" style="background: rgba(27, 160, 215, 0.15); color: #38bdf8; border-color: rgba(27, 160, 215, 0.3);">Cisco</span>
+          </div>
+          <h3 class="cert-title">CCNA 3: Enterprise Networking, Security, and Automation</h3>
+          <span class="cert-org">Cisco Networking Academy</span>
+          <span class="cert-date"><i class="far fa-calendar-alt"></i> 29 Jun 2026</span>
+          <button class="btn btn-secondary btn-sm" onclick="openCertModal('CCNA 3: Enterprise Networking, Security, and Automation', 'Cisco Networking Academy', '29 Jun 2026', 'OSPFv2, WAN technologies, network security concepts, ACLs, NAT, QoS, network management, and network automation APIs.', 'assets/images/certs/cert_ccna_3.jpg')">
+            <i class="fas fa-eye"></i> View Certificate
+          </button>
+        </div>
+
+        <!-- 11. Oracle Certified Foundations Associate -->
+        <div class="cert-card glass-card" data-cert-category="other">
+          <div class="cert-header-row">
+            <div class="cert-badge-icon" style="background: rgba(234, 27, 35, 0.12); border: 1px solid rgba(234, 27, 35, 0.3);">
+              <svg width="26" height="18" viewBox="0 0 24 16" fill="#F87171" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.1 1.6H7.9C3.5 1.6 0 5.1 0 9.5s3.5 7.9 7.9 7.9h8.2c4.4 0 7.9-3.5 7.9-7.9s-3.5-7.9-7.9-7.9zm.1 12.3H7.8c-2.4 0-4.4-2-4.4-4.4s2-4.4 4.4-4.4h8.4c2.4 0 4.4 2 4.4 4.4s-2 4.4-4.4 4.4z"/>
+              </svg>
+            </div>
+            <span class="cert-issuer-badge" style="background: rgba(234, 27, 35, 0.15); color: #f87171; border-color: rgba(234, 27, 35, 0.3);">Oracle</span>
+          </div>
+          <h3 class="cert-title">Oracle Certified Foundations Associate</h3>
+          <span class="cert-org">Oracle University</span>
+          <span class="cert-date"><i class="far fa-calendar-alt"></i> 16 Aug 2025</span>
+          <button class="btn btn-secondary btn-sm" onclick="openCertModal('Oracle Certified Foundations Associate', 'Oracle University', '16 Aug 2025', 'Official Oracle certification verifying fundamental knowledge of Java SE programming language features, object-oriented concepts, and JVM execution.', 'assets/images/certs/cert_oracle_foundations.jpg')">
+            <i class="fas fa-eye"></i> View Certificate
+          </button>
+        </div>
+
+        <!-- 12. Infosys Python Concurrent Programming -->
+        <div class="cert-card glass-card" data-cert-category="other">
+          <div class="cert-header-row">
+            <div class="cert-badge-icon" style="background: rgba(0, 124, 195, 0.12); border: 1px solid rgba(0, 124, 195, 0.3);">
+              <svg width="26" height="14" viewBox="0 0 24 12" fill="#60A5FA" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0h3.5v12H0V0zm5.6 3.6h3.2v1.5h.1c.4-.8 1.4-1.7 3.1-1.7 3.3 0 4.1 2.2 4.1 5v3.6h-3.4V8.7c0-1.2-.4-2.1-1.6-2.1-1 0-1.5.7-1.7 1.4v4H5.6V3.6z"/>
+              </svg>
+            </div>
+            <span class="cert-issuer-badge" style="background: rgba(0, 124, 195, 0.15); color: #60a5fa; border-color: rgba(0, 124, 195, 0.3);">Infosys</span>
+          </div>
+          <h3 class="cert-title">Python Concurrent Programming</h3>
+          <span class="cert-org">Infosys Springboard</span>
+          <span class="cert-date"><i class="far fa-calendar-alt"></i> 15 Oct 2025</span>
+          <button class="btn btn-secondary btn-sm" onclick="openCertModal('Python Concurrent Programming', 'Infosys Springboard', '15 Oct 2025', 'Advanced Python programming techniques including multithreading, multiprocessing, asyncio event loops, and parallel processing optimization.', 'assets/images/certs/cert_python_concurrent.jpg', 'https://verify.onwingspan.com')">
+            <i class="fas fa-eye"></i> View Certificate
+          </button>
+        </div>
+
+        <!-- 13. Infosys Securing the Backend Layers -->
+        <div class="cert-card glass-card" data-cert-category="other">
+          <div class="cert-header-row">
+            <div class="cert-badge-icon" style="background: rgba(0, 124, 195, 0.12); border: 1px solid rgba(0, 124, 195, 0.3);">
+              <svg width="26" height="14" viewBox="0 0 24 12" fill="#60A5FA" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0h3.5v12H0V0zm5.6 3.6h3.2v1.5h.1c.4-.8 1.4-1.7 3.1-1.7 3.3 0 4.1 2.2 4.1 5v3.6h-3.4V8.7c0-1.2-.4-2.1-1.6-2.1-1 0-1.5.7-1.7 1.4v4H5.6V3.6z"/>
+              </svg>
+            </div>
+            <span class="cert-issuer-badge" style="background: rgba(0, 124, 195, 0.15); color: #60a5fa; border-color: rgba(0, 124, 195, 0.3);">Infosys</span>
+          </div>
+          <h3 class="cert-title">Securing the Backend Layers</h3>
+          <span class="cert-org">Infosys Springboard</span>
+          <span class="cert-date"><i class="far fa-calendar-alt"></i> 13 Apr 2026</span>
+          <button class="btn btn-secondary btn-sm" onclick="openCertModal('Securing the Backend Layers', 'Infosys Springboard', '13 Apr 2026', 'Industry best practices for securing REST APIs, authentication/authorization (JWT, OAuth2), SQL injection prevention, and backend hardening.', 'assets/images/certs/cert_securing_backend.jpg', 'https://verify.onwingspan.com')">
+            <i class="fas fa-eye"></i> View Certificate
+          </button>
+        </div>
+
+        <!-- 14. Cisco Python Essentials 1 -->
+        <div class="cert-card glass-card" data-cert-category="other">
+          <div class="cert-header-row">
+            <div class="cert-badge-icon" style="background: rgba(27, 160, 215, 0.12); border: 1px solid rgba(27, 160, 215, 0.3);">
+              <i class="fab fa-python" style="color: #38bdf8; font-size: 1.2rem;"></i>
+            </div>
+            <span class="cert-issuer-badge" style="background: rgba(27, 160, 215, 0.15); color: #38bdf8; border-color: rgba(27, 160, 215, 0.3);">Cisco & Python Inst.</span>
+          </div>
+          <h3 class="cert-title">Python Essentials 1</h3>
+          <span class="cert-org">Cisco Networking Academy & Python Institute</span>
+          <span class="cert-date"><i class="far fa-calendar-alt"></i> 25 Jun 2026</span>
+          <button class="btn btn-secondary btn-sm" onclick="openCertModal('Python Essentials 1', 'Cisco Networking Academy & Python Institute', '25 Jun 2026', 'Fundamental programming concepts, Python syntax, control flow, functions, lists, tuples, dictionaries, data handling, and algorithmic problem-solving.', 'assets/images/certs/cert_python_essentials_1.jpg')">
+            <i class="fas fa-eye"></i> View Certificate
+          </button>
+        </div>
+
+        <!-- 15. Cisco Python Essentials 2 -->
+        <div class="cert-card glass-card" data-cert-category="other">
+          <div class="cert-header-row">
+            <div class="cert-badge-icon" style="background: rgba(27, 160, 215, 0.12); border: 1px solid rgba(27, 160, 215, 0.3);">
+              <i class="fab fa-python" style="color: #38bdf8; font-size: 1.2rem;"></i>
+            </div>
+            <span class="cert-issuer-badge" style="background: rgba(27, 160, 215, 0.15); color: #38bdf8; border-color: rgba(27, 160, 215, 0.3);">Cisco & Python Inst.</span>
+          </div>
+          <h3 class="cert-title">Python Essentials 2</h3>
+          <span class="cert-org">Cisco Networking Academy & Python Institute</span>
+          <span class="cert-date"><i class="far fa-calendar-alt"></i> 25 Jun 2026</span>
+          <button class="btn btn-secondary btn-sm" onclick="openCertModal('Python Essentials 2', 'Cisco Networking Academy & Python Institute', '25 Jun 2026', 'Object-Oriented Programming (OOP), modules, packages, exception handling, string methods, file processing, and advanced Python data structures.', 'assets/images/certs/cert_python_essentials_2.jpg')">
+            <i class="fas fa-eye"></i> View Certificate
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       Resume Section
+       ========================================== -->
+  <section id="resume">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge"><i class="fas fa-file-alt"></i> Curriculum Vitae</span>
+        <h2 class="section-title">My <span class="gradient-text">Resume</span></h2>
+        <p class="section-subtitle">Preview or download my complete official resume detailing my skills, education, and internship achievements.</p>
+      </div>
+
+      <div class="resume-container">
+        <div class="glass-card" style="padding: 3rem 2rem; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 1.5rem; max-width: 600px; width: 100%;">
+          <div style="width: 64px; height: 64px; border-radius: 50%; background: var(--gradient-primary); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4);">
+            <i class="fas fa-file-pdf"></i>
+          </div>
+          <div>
+            <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 0.5rem;">Pallapu Dileep Kumar - Resume</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem;">Computer Science & Engineering Student | Full-Stack Developer</p>
+          </div>
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; width: 100%;">
+            <a href="https://drive.google.com/file/d/1vRaKKRLEVEdEUkuS7hOEMboNMMeevOyO/view?usp=drivesdk" target="_blank" class="btn btn-primary">
+              <i class="fas fa-download"></i> Download Resume
+            </a>
+            <a href="https://drive.google.com/file/d/1vRaKKRLEVEdEUkuS7hOEMboNMMeevOyO/view?usp=drivesdk" target="_blank" class="btn btn-secondary">
+              <i class="fab fa-google-drive"></i> Open in Drive
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       GitHub Contributions Section
+       ========================================== -->
+  <section id="github">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge"><i class="fab fa-github"></i> Open Source</span>
+        <h2 class="section-title">GitHub <span class="gradient-text">Activity</span></h2>
+        <p class="section-subtitle">Live repository statistics and continuous coding contribution activity on GitHub.</p>
+      </div>
+
+      <div class="github-grid">
+        <div class="github-stat-card glass-card">
+          <div class="github-icon"><i class="fas fa-code-branch"></i></div>
+          <div>
+            <div class="github-stat-val">10+</div>
+            <div class="github-stat-lbl">Public Repositories</div>
+          </div>
+        </div>
+
+        <div class="github-stat-card glass-card">
+          <div class="github-icon"><i class="fas fa-star"></i></div>
+          <div>
+            <div class="github-stat-val">15+</div>
+            <div class="github-stat-lbl">Total Stars Earned</div>
+          </div>
+        </div>
+
+        <div class="github-stat-card glass-card">
+          <div class="github-icon"><i class="fas fa-users"></i></div>
+          <div>
+            <div class="github-stat-val">25+</div>
+            <div class="github-stat-lbl">GitHub Followers</div>
+          </div>
+        </div>
+
+        <div class="github-stat-card glass-card">
+          <div class="github-icon"><i class="fas fa-fire"></i></div>
+          <div>
+            <div class="github-stat-val">350+</div>
+            <div class="github-stat-lbl">Yearly Commits</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 2rem;">
+        <a href="https://github.com/DileepKumarPallapu" target="_blank" class="btn btn-primary">
+          <i class="fab fa-github"></i> Visit GitHub Profile (@DileepKumarPallapu)
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       Tech Stack Wall Section
+       ========================================== -->
+  <section id="techstack">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge"><i class="fas fa-layer-group"></i> Ecosystem</span>
+        <h2 class="section-title">My Tech <span class="gradient-text">Stack</span></h2>
+        <p class="section-subtitle">Technologies, frameworks, and developer tools I utilize to craft modern digital solutions.</p>
+      </div>
+
+      <div class="tech-wall">
+        <div class="tech-badge-item"><i class="fab fa-java" style="color: #f89820;"></i> Java</div>
+        <div class="tech-badge-item"><i class="fab fa-python" style="color: #3776ab;"></i> Python</div>
+        <div class="tech-badge-item"><i class="fas fa-leaf" style="color: #6db33f;"></i> Spring Boot</div>
+        <div class="tech-badge-item"><i class="fab fa-react" style="color: #61dafb;"></i> React.js</div>
+        <div class="tech-badge-item"><i class="fas fa-database" style="color: #00758f;"></i> MySQL</div>
+        <div class="tech-badge-item"><i class="fas fa-server" style="color: #47a248;"></i> MongoDB</div>
+        <div class="tech-badge-item"><i class="fab fa-git-alt" style="color: #f05032;"></i> Git</div>
+        <div class="tech-badge-item"><i class="fab fa-github"></i> GitHub</div>
+        <div class="tech-badge-item"><i class="fab fa-html5" style="color: #e34f26;"></i> HTML5</div>
+        <div class="tech-badge-item"><i class="fab fa-css3-alt" style="color: #1572b6;"></i> CSS3</div>
+        <div class="tech-badge-item"><i class="fab fa-js-square" style="color: #f7df1e;"></i> JavaScript</div>
+        <div class="tech-badge-item"><i class="fab fa-bootstrap" style="color: #7952b3;"></i> Bootstrap</div>
+        <div class="tech-badge-item"><i class="fas fa-code" style="color: #38bdf8;"></i> Tailwind CSS</div>
+        <div class="tech-badge-item"><i class="fas fa-network-wired" style="color: #3b82f6;"></i> REST APIs</div>
+        <div class="tech-badge-item"><i class="fas fa-laptop-code" style="color: #007acc;"></i> VS Code</div>
+        <div class="tech-badge-item"><i class="fab fa-figma" style="color: #f24e1e;"></i> Figma</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       Achievements & Metrics Section
+       ========================================== -->
+  <section id="achievements">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge"><i class="fas fa-trophy"></i> Key Metrics</span>
+        <h2 class="section-title">Achievements & <span class="gradient-text">Impact</span></h2>
+        <p class="section-subtitle">Quantifiable milestones accomplished across academics, internships, and project developments.</p>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card glass-card">
+          <i class="fas fa-project-diagram stat-icon"></i>
+          <span class="stat-number" data-target="4">0</span>
+          <span class="stat-label">Academic Projects</span>
+        </div>
+
+        <div class="stat-card glass-card">
+          <i class="fas fa-briefcase stat-icon"></i>
+          <span class="stat-number" data-target="2">0</span>
+          <span class="stat-label">Internship Experiences</span>
+        </div>
+
+        <div class="stat-card glass-card">
+          <i class="fas fa-cogs stat-icon"></i>
+          <span class="stat-number" data-target="20">0</span>
+          <span class="stat-label">Technical Skills</span>
+        </div>
+
+        <div class="stat-card glass-card">
+          <i class="fas fa-certificate stat-icon"></i>
+          <span class="stat-number" data-target="5">0</span>
+          <span class="stat-label">Certifications Earned</span>
+        </div>
+
+        <div class="stat-card glass-card">
+          <i class="fab fa-github stat-icon"></i>
+          <span class="stat-number" data-target="10">0</span>
+          <span class="stat-label">GitHub Repositories</span>
+        </div>
+
+        <div class="stat-card glass-card">
+          <i class="fas fa-laptop-code stat-icon"></i>
+          <span class="stat-number" data-target="15">0</span>
+          <span class="stat-label">Technologies Learned</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       Contact Section
+       ========================================== -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge"><i class="fas fa-envelope"></i> Get In Touch</span>
+        <h2 class="section-title">Contact <span class="gradient-text">Me</span></h2>
+        <p class="section-subtitle">Interested in working together or discussing potential software development opportunities? Reach out!</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info-column">
+          <div class="contact-card-item glass-card">
+            <div class="contact-icon-wrapper"><i class="fas fa-envelope"></i></div>
+            <div class="contact-detail">
+              <h4>Email Address</h4>
+              <a href="mailto:dileepkumarpallapu28@gmail.com">dileepkumarpallapu28@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="contact-card-item glass-card">
+            <div class="contact-icon-wrapper"><i class="fas fa-phone-alt"></i></div>
+            <div class="contact-detail">
+              <h4>Phone Number</h4>
+              <a href="tel:+916300837459">+91 6300837459</a>
+            </div>
+          </div>
+
+          <div class="contact-card-item glass-card">
+            <div class="contact-icon-wrapper"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="contact-detail">
+              <h4>Location</h4>
+              <p>Chennai, Tamil Nadu, India</p>
+            </div>
+          </div>
+
+          <div class="contact-card-item glass-card" style="flex-direction: column; align-items: flex-start;">
+            <h4 style="margin-bottom: 0.8rem;">Connect on Social Platforms</h4>
+            <div class="social-links">
+              <a href="https://www.linkedin.com/in/dileep-kumar-pallapu" target="_blank" class="social-btn" aria-label="LinkedIn Profile">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="https://github.com/DileepKumarPallapu" target="_blank" class="social-btn" aria-label="GitHub Profile">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="mailto:dileepkumarpallapu28@gmail.com" class="social-btn" aria-label="Send Email">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-card glass-card">
+          <form id="contact-form" action="https://formspree.io/f/dileepkumarpallapu28@gmail.com" method="POST">
+            <!-- Hidden configuration for direct mail -->
+            <input type="hidden" name="_to" value="dileepkumarpallapu28@gmail.com">
+            <input type="hidden" name="_subject" value="New Portfolio Contact Message - Pallapu Dileep Kumar">
+
+            <div class="form-group">
+              <label for="form-name" class="form-label">Full Name</label>
+              <input type="text" id="form-name" name="name" class="form-input" placeholder="e.g. John Doe" required>
+            </div>
+
+            <div class="form-group">
+              <label for="form-email" class="form-label">Email Address</label>
+              <input type="email" id="form-email" name="email" class="form-input" placeholder="e.g. john@example.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="form-subject" class="form-label">Subject</label>
+              <input type="text" id="form-subject" name="subject" class="form-input" placeholder="e.g. Project Inquiry / Job Opportunity" required>
+            </div>
+
+            <div class="form-group">
+              <label for="form-message" class="form-label">Your Message</label>
+              <textarea id="form-message" name="message" class="form-textarea" placeholder="Write your message here..." required></textarea>
+            </div>
+
+            <div id="form-status-alert" style="display: none; margin-bottom: 1rem; padding: 1rem; border-radius: var(--radius-sm); font-size: 0.9rem; line-height: 1.5;"></div>
+
+            <button type="submit" id="form-submit-btn" class="btn btn-primary" style="width: 100%;">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       Footer Section
+       ========================================== -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#hero" class="nav-logo">
+            <div class="logo-badge"><img src="assets/images/profile.jpg" alt="Pallapu Dileep Kumar Profile"></div>
+            <span>Pallapu Dileep Kumar</span>
+          </a>
+          <p>Computer Science and Engineering student, Full-Stack Developer, and AI enthusiast striving for excellence in software solutions.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Quick Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills & Expertise</a></li>
+            <li><a href="#projects">Featured Projects</a></li>
+            <li><a href="#contact">Get In Touch</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Contact & Socials</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:dileepkumarpallapu28@gmail.com"><i class="fas fa-envelope"></i> Email Dileep</a></li>
+            <li><a href="https://www.linkedin.com/in/dileep-kumar-pallapu" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn Profile</a></li>
+            <li><a href="https://github.com/DileepKumarPallapu" target="_blank"><i class="fab fa-github"></i> GitHub Profile</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Pallapu Dileep Kumar. All Rights Reserved.</p>
+        <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+          <i class="fas fa-arrow-up"></i>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Universal Modal -->
+  <div id="modal-overlay" class="modal-overlay">
+    <div class="modal-card glass-card">
+      <button id="modal-close" class="modal-close"><i class="fas fa-times"></i></button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
