@@ -970,14 +970,21 @@
 
       <div class="project-filters" style="margin-bottom: 2.5rem;">
         <button class="tab-btn active" data-cert-filter="all"><i class="fas fa-th-large"></i> All Credentials (15)</button>
+        <button class="tab-btn" data-cert-filter="featured"><i class="fas fa-star" style="color: #f59e0b;"></i> Featured Credentials (6)</button>
         <button class="tab-btn" data-cert-filter="mongodb"><i class="fas fa-database"></i> MongoDB AI (4)</button>
         <button class="tab-btn" data-cert-filter="cisco"><i class="fas fa-shield-alt"></i> Cisco & Security (6)</button>
         <button class="tab-btn" data-cert-filter="other"><i class="fas fa-award"></i> Oracle, Infosys & Python (5)</button>
       </div>
 
       <div class="cert-grid">
+        <!-- ================= Technical Domain 1: MongoDB AI & Data Architectures ================= -->
+        <div class="cert-domain-header" data-cert-domain="mongodb">
+          <h3 class="cert-domain-title"><i class="fas fa-brain" style="color: #13aa52;"></i> MongoDB AI & Vector Search Domain</h3>
+          <div class="cert-domain-line"></div>
+        </div>
+
         <!-- 1. MongoDB Vector Search -->
-        <div class="cert-card glass-card" data-cert-category="mongodb">
+        <div class="cert-card glass-card" data-cert-category="mongodb" data-cert-featured="true">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(19, 170, 82, 0.12); border: 1px solid rgba(19, 170, 82, 0.3);">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -985,6 +992,7 @@
               </svg>
             </div>
             <span class="cert-issuer-badge" style="background: rgba(19, 170, 82, 0.15); color: #13aa52; border-color: rgba(19, 170, 82, 0.3);">MongoDB</span>
+            <span class="featured-badge-tag"><i class="fas fa-star"></i> Featured</span>
           </div>
           <h3 class="cert-title">Building AI-Powered Search with MongoDB Vector Search</h3>
           <span class="cert-org">MongoDB</span>
@@ -995,7 +1003,7 @@
         </div>
 
         <!-- 2. MongoDB AI Agents -->
-        <div class="cert-card glass-card" data-cert-category="mongodb">
+        <div class="cert-card glass-card" data-cert-category="mongodb" data-cert-featured="true">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(19, 170, 82, 0.12); border: 1px solid rgba(19, 170, 82, 0.3);">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1003,6 +1011,7 @@
               </svg>
             </div>
             <span class="cert-issuer-badge" style="background: rgba(19, 170, 82, 0.15); color: #13aa52; border-color: rgba(19, 170, 82, 0.3);">MongoDB</span>
+            <span class="featured-badge-tag"><i class="fas fa-star"></i> Featured</span>
           </div>
           <h3 class="cert-title">Building AI Agents with MongoDB</h3>
           <span class="cert-org">MongoDB</span>
@@ -1048,8 +1057,14 @@
           </button>
         </div>
 
+        <!-- ================= Technical Domain 2: Cisco Networking & Cybersecurity ================= -->
+        <div class="cert-domain-header" data-cert-domain="cisco">
+          <h3 class="cert-domain-title"><i class="fas fa-shield-alt" style="color: #38bdf8;"></i> Cisco Networking & Cybersecurity Domain</h3>
+          <div class="cert-domain-line"></div>
+        </div>
+
         <!-- 5. Cisco Ethical Hacker -->
-        <div class="cert-card glass-card" data-cert-category="cisco">
+        <div class="cert-card glass-card" data-cert-category="cisco" data-cert-featured="true">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(27, 160, 215, 0.12); border: 1px solid rgba(27, 160, 215, 0.3);">
               <svg width="26" height="18" viewBox="0 0 24 16" fill="#38BDF8" xmlns="http://www.w3.org/2000/svg">
@@ -1057,6 +1072,7 @@
               </svg>
             </div>
             <span class="cert-issuer-badge" style="background: rgba(27, 160, 215, 0.15); color: #38bdf8; border-color: rgba(27, 160, 215, 0.3);">Cisco</span>
+            <span class="featured-badge-tag"><i class="fas fa-star"></i> Featured</span>
           </div>
           <h3 class="cert-title">Ethical Hacker</h3>
           <span class="cert-org">Cisco Networking Academy</span>
@@ -1139,7 +1155,7 @@
         </div>
 
         <!-- 10. Cisco CCNA 3 -->
-        <div class="cert-card glass-card" data-cert-category="cisco">
+        <div class="cert-card glass-card" data-cert-category="cisco" data-cert-featured="true">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(27, 160, 215, 0.12); border: 1px solid rgba(27, 160, 215, 0.3);">
               <svg width="26" height="18" viewBox="0 0 24 16" fill="#38BDF8" xmlns="http://www.w3.org/2000/svg">
@@ -1147,6 +1163,7 @@
               </svg>
             </div>
             <span class="cert-issuer-badge" style="background: rgba(27, 160, 215, 0.15); color: #38bdf8; border-color: rgba(27, 160, 215, 0.3);">Cisco</span>
+            <span class="featured-badge-tag"><i class="fas fa-star"></i> Featured</span>
           </div>
           <h3 class="cert-title">CCNA 3: Enterprise Networking, Security, and Automation</h3>
           <span class="cert-org">Cisco Networking Academy</span>
@@ -1156,8 +1173,14 @@
           </button>
         </div>
 
+        <!-- ================= Technical Domain 3: Software Engineering & Enterprise Security ================= -->
+        <div class="cert-domain-header" data-cert-domain="other">
+          <h3 class="cert-domain-title"><i class="fas fa-code-branch" style="color: #60a5fa;"></i> Oracle, Infosys & Programming Domain</h3>
+          <div class="cert-domain-line"></div>
+        </div>
+
         <!-- 11. Oracle Certified Foundations Associate -->
-        <div class="cert-card glass-card" data-cert-category="other">
+        <div class="cert-card glass-card" data-cert-category="other" data-cert-featured="true">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(234, 27, 35, 0.12); border: 1px solid rgba(234, 27, 35, 0.3);">
               <svg width="26" height="18" viewBox="0 0 24 16" fill="#F87171" xmlns="http://www.w3.org/2000/svg">
@@ -1165,6 +1188,7 @@
               </svg>
             </div>
             <span class="cert-issuer-badge" style="background: rgba(234, 27, 35, 0.15); color: #f87171; border-color: rgba(234, 27, 35, 0.3);">Oracle</span>
+            <span class="featured-badge-tag"><i class="fas fa-star"></i> Featured</span>
           </div>
           <h3 class="cert-title">Oracle Certified Foundations Associate</h3>
           <span class="cert-org">Oracle University</span>
@@ -1175,7 +1199,7 @@
         </div>
 
         <!-- 12. Infosys Python Concurrent Programming -->
-        <div class="cert-card glass-card" data-cert-category="other">
+        <div class="cert-card glass-card" data-cert-category="other" data-cert-featured="true">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(0, 124, 195, 0.12); border: 1px solid rgba(0, 124, 195, 0.3);">
               <svg width="26" height="14" viewBox="0 0 24 12" fill="#60A5FA" xmlns="http://www.w3.org/2000/svg">
@@ -1183,6 +1207,7 @@
               </svg>
             </div>
             <span class="cert-issuer-badge" style="background: rgba(0, 124, 195, 0.15); color: #60a5fa; border-color: rgba(0, 124, 195, 0.3);">Infosys</span>
+            <span class="featured-badge-tag"><i class="fas fa-star"></i> Featured</span>
           </div>
           <h3 class="cert-title">Python Concurrent Programming</h3>
           <span class="cert-org">Infosys Springboard</span>

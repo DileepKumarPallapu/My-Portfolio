@@ -1110,9 +1110,43 @@ section {
   font-weight: 600;
 }
 
-.cert-date {
-  color: var(--text-muted);
-  font-size: 0.85rem;
+.cert-domain-header {
+  grid-column: 1 / -1;
+  margin-top: 1.8rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cert-domain-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  white-space: nowrap;
+}
+
+.cert-domain-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, var(--border-color) 0%, transparent 100%);
+}
+
+.featured-badge-tag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.15rem 0.55rem;
+  border-radius: var(--radius-full);
+  background: rgba(245, 158, 11, 0.15);
+  color: #f59e0b;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-left: auto;
 }
 
 /* ==========================================================================

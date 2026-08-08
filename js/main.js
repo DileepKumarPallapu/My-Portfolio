@@ -266,6 +266,7 @@ function initProjectsFilter() {
 function initCertificatesFilter() {
   const filterBtns = document.querySelectorAll('[data-cert-filter]');
   const certCards = document.querySelectorAll('.cert-card');
+  const domainHeaders = document.querySelectorAll('.cert-domain-header');
 
   if (!filterBtns.length || !certCards.length) return;
 
@@ -277,10 +278,30 @@ function initCertificatesFilter() {
       const filter = btn.dataset.certFilter;
 
       certCards.forEach(card => {
-        if (filter === 'all' || card.dataset.certCategory === filter) {
+        const isFeatured = card.dataset.certFeatured === 'true';
+        const category = card.dataset.certCategory;
+
+        if (filter === 'all') {
+          card.style.display = 'flex';
+        } else if (filter === 'featured') {
+          card.style.display = isFeatured ? 'flex' : 'none';
+        } else if (category === filter) {
           card.style.display = 'flex';
         } else {
           card.style.display = 'none';
+        }
+      });
+
+      domainHeaders.forEach(header => {
+        const headerCategory = header.dataset.certDomain;
+        if (filter === 'all') {
+          header.style.display = 'flex';
+        } else if (filter === 'featured') {
+          header.style.display = headerCategory === 'featured' ? 'flex' : 'none';
+        } else if (headerCategory === filter) {
+          header.style.display = 'flex';
+        } else {
+          header.style.display = 'none';
         }
       });
     });
