@@ -269,6 +269,9 @@ function initCertificatesFilter() {
   const certCards = document.querySelectorAll('.cert-card');
   const domainHeaders = document.querySelectorAll('.cert-domain-header');
   const indicator = document.getElementById('active-company-indicator');
+  const noMatchCard = document.getElementById('no-cert-match');
+  const resetBtn = document.getElementById('reset-cert-filters');
+  const emptyResetBtn = document.getElementById('empty-reset-btn');
 
   if (!certCards.length) return;
 
@@ -301,17 +304,22 @@ function initCertificatesFilter() {
 
       if (matchCategory && matchCompany) {
         card.style.display = 'flex';
-        card.style.animation = 'fadeIn 0.4s ease forwards';
+        card.style.animation = 'fadeIn 0.35s ease forwards';
         visibleCount++;
       } else {
         card.style.display = 'none';
       }
     });
 
+    // Empty state visibility
+    if (noMatchCard) {
+      noMatchCard.style.display = (visibleCount === 0) ? 'block' : 'none';
+    }
+
     // Update domain headers visibility
     domainHeaders.forEach(header => {
       const headerCategory = header.dataset.certDomain;
-      if (currentCompany !== 'all') {
+      if (visibleCount === 0 || currentCompany !== 'all') {
         header.style.display = 'none';
       } else if (currentCategory === 'all') {
         header.style.display = 'flex';
@@ -330,6 +338,14 @@ function initCertificatesFilter() {
       const activeCompText = document.querySelector('[data-company-filter].active')?.textContent.trim().split('(')[0].trim() || 'All Issuers';
       indicator.textContent = `Showing: ${visibleCount} credentials (${activeCompText} · ${activeCatText})`;
     }
+  }
+
+  function resetAll() {
+    currentCategory = 'all';
+    currentCompany = 'all';
+    categoryBtns.forEach(b => b.classList.toggle('active', b.dataset.certFilter === 'all'));
+    companyBtns.forEach(b => b.classList.toggle('active', b.dataset.companyFilter === 'all'));
+    applyFilters();
   }
 
   // Category buttons click handler
@@ -351,6 +367,9 @@ function initCertificatesFilter() {
       applyFilters();
     });
   });
+
+  if (resetBtn) resetBtn.addEventListener('click', resetAll);
+  if (emptyResetBtn) emptyResetBtn.addEventListener('click', resetAll);
 }
 
 /* --------------------------------------------------------------------------
