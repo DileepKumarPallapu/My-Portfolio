@@ -895,6 +895,45 @@
             </div>
           </div>
         </div>
+                <!-- Project 3: Interactive AI Developer Portfolio (3rd Position) -->
+        <div class="project-card glass-card" data-category="frontend">
+          <div class="project-img-container">
+            <img src="assets/images/projects/portfolio_preview.png" alt="AI Interactive Developer Portfolio">
+            <div class="project-overlay" style="display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center;">
+              <a href="https://dileepkumarpallapu.github.io/My-Portfolio/" target="_blank" class="btn btn-primary btn-sm">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+              <a href="https://github.com/DileepKumarPallapu/My-Portfolio" target="_blank" class="btn btn-secondary btn-sm" style="background: rgba(255,255,255,0.2); color: #fff;">
+                <i class="fab fa-github"></i> GitHub Repo
+              </a>
+            </div>
+          </div>
+          <div class="project-content">
+            <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.4rem;">
+              <span style="font-size: 0.75rem; background: rgba(59, 130, 246, 0.15); color: #3b82f6; padding: 0.15rem 0.5rem; border-radius: var(--radius-full); border: 1px solid rgba(59, 130, 246, 0.3); font-weight: 600;"><i class="fas fa-star"></i> Featured Project</span>
+              <span style="font-size: 0.75rem; background: rgba(168, 85, 247, 0.15); color: #a855f7; padding: 0.15rem 0.5rem; border-radius: var(--radius-full); border: 1px solid rgba(168, 85, 247, 0.3); font-weight: 600;"><i class="fas fa-magic"></i> Glassmorphic UI</span>
+            </div>
+            <h3 class="project-title">Interactive AI Developer Portfolio</h3>
+            <p class="project-desc">A responsive personal brand and engineering portfolio showcasing 67+ verified credentials, 9 internships, 21 featured badges, interactive multi-domain and company-wise credential modal filtering, live theme toggling, and GitHub Pages deployment.</p>
+            <div class="project-tech-tags">
+              <span class="tech-tag">HTML5 / CSS3</span>
+              <span class="tech-tag">JavaScript (ES6+)</span>
+              <span class="tech-tag">Glassmorphism</span>
+              <span class="tech-tag">Dynamic Filtering</span>
+              <span class="tech-tag">Modal Viewer</span>
+              <span class="tech-tag">GitHub Pages</span>
+            </div>
+            <div class="project-footer" style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+              <a href="https://dileepkumarpallapu.github.io/My-Portfolio/" target="_blank" class="project-link" style="color: #10b981;">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+              <a href="https://github.com/DileepKumarPallapu/My-Portfolio" target="_blank" class="project-link">
+                <i class="fab fa-github"></i> View Repository
+              </a>
+            </div>
+          </div>
+        </div>
+
         <!-- Project 1: AI-Based Voice Assistant -->
         <div class="project-card glass-card" data-category="ai">
           <div class="project-img-container">
@@ -1079,20 +1118,46 @@
         <p class="section-subtitle">Verified certifications and professional training credentials earned across technical domains.</p>
       </div>
 
-      <div class="project-filters" style="margin-bottom: 2.5rem;">
-        <button class="tab-btn active" data-cert-filter="all"><i class="fas fa-th-large"></i> All Credentials (66)</button>
-        <button class="tab-btn" data-cert-filter="featured"><i class="fas fa-star" style="color: #f59e0b;"></i> Featured Credentials (21)</button>
+      <div class="project-filters" style="margin-bottom: 1.25rem;">
+        <button class="tab-btn active" data-cert-filter="all"><i class="fas fa-th-large"></i> All Credentials (67)</button>
+        <button class="tab-btn" data-cert-filter="featured"><i class="fas fa-star" style="color: #f59e0b;"></i> Featured Credentials (22)</button>
         <button class="tab-btn" data-cert-filter="internship"><i class="fas fa-briefcase" style="color: #ec4899;"></i> Internships & Experience (9)</button>
         <button class="tab-btn" data-cert-filter="mongodb"><i class="fas fa-database"></i> MongoDB AI (6)</button>
         <button class="tab-btn" data-cert-filter="cisco"><i class="fas fa-shield-alt"></i> Cisco & Security (6)</button>
-        <button class="tab-btn" data-cert-filter="other"><i class="fas fa-code"></i> Software & Programming (27)</button>
+        <button class="tab-btn" data-cert-filter="other"><i class="fas fa-code"></i> Software & Programming (28)</button>
         <button class="tab-btn" data-cert-filter="webinar"><i class="fas fa-video"></i> Webinars, Summits & Workshops (18)</button>
+      </div>
+
+      <!-- Company / Organization Filter Sub-Bar -->
+      <div class="company-filters-bar" style="margin-bottom: 2.5rem; background: rgba(15, 23, 42, 0.5); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: var(--radius-lg); padding: 1rem 1.25rem;">
+        <div style="font-size: 0.85rem; font-weight: 600; color: #94a3b8; margin-bottom: 0.75rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
+          <span><i class="fas fa-building" style="color: #38bdf8; margin-right: 0.4rem;"></i> Filter by Organization / Company:</span>
+          <span id="active-company-indicator" style="font-size: 0.75rem; color: #38bdf8; background: rgba(56, 189, 248, 0.1); padding: 0.15rem 0.5rem; border-radius: 9999px; border: 1px solid rgba(56, 189, 248, 0.2);">Showing: All (67)</span>
+        </div>
+        <div class="company-tab-group" style="display: flex; gap: 0.4rem; flex-wrap: wrap; align-items: center;">
+          <button class="company-btn active" data-company-filter="all">All Issuers (67)</button>
+          <button class="company-btn" data-company-filter="infosys">Infosys (12)</button>
+          <button class="company-btn" data-company-filter="cisco">Cisco (8)</button>
+          <button class="company-btn" data-company-filter="turnip">Turnip & Qualcomm (7)</button>
+          <button class="company-btn" data-company-filter="mongodb">MongoDB (6)</button>
+          <button class="company-btn" data-company-filter="thingqbator">thingQbator (6)</button>
+          <button class="company-btn" data-company-filter="veltech">Vel Tech (4)</button>
+          <button class="company-btn" data-company-filter="skillnexis">Skill Nexis (3)</button>
+          <button class="company-btn" data-company-filter="qskill">QSkill (3)</button>
+          <button class="company-btn" data-company-filter="guvi">GUVI (3)</button>
+          <button class="company-btn" data-company-filter="naukri">Naukri & Unstop (3)</button>
+          <button class="company-btn" data-company-filter="tata">Tata & TCS (2)</button>
+          <button class="company-btn" data-company-filter="coursera">Coursera (2)</button>
+          <button class="company-btn" data-company-filter="deloitte">Deloitte (1)</button>
+          <button class="company-btn" data-company-filter="oracle">Oracle (1)</button>
+          <button class="company-btn" data-company-filter="other_company">Other Programs (6)</button>
+        </div>
       </div>
 
       <div class="cert-grid">
         <!-- ================= Featured Credentials Header ================= -->
         <div class="cert-domain-header" data-cert-domain="featured" style="display: none;">
-          <h3 class="cert-domain-title"><i class="fas fa-star" style="color: #f59e0b;"></i> Featured & Highlighted Credentials (21)</h3>
+          <h3 class="cert-domain-title"><i class="fas fa-star" style="color: #f59e0b;"></i> Featured & Highlighted Credentials (22)</h3>
           <div class="cert-domain-line"></div>
         </div>
 
@@ -1103,7 +1168,7 @@
         </div>
 
         <!-- 0.1 Skill Nexis - Machine Learning & AI Intern -->
-        <div class="cert-card glass-card" data-cert-category="internship">
+        <div class="cert-card glass-card" data-cert-company="skillnexis" data-cert-category="internship">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(139, 92, 246, 0.12); border: 1px solid rgba(139, 92, 246, 0.3);">
               <i class="fas fa-brain" style="color: #8b5cf6; font-size: 1.2rem;"></i>
@@ -1124,7 +1189,7 @@
         </div>
 
         <!-- 0.2 Skill Nexis - Data Science Intern (Python) -->
-        <div class="cert-card glass-card" data-cert-category="internship">
+        <div class="cert-card glass-card" data-cert-company="skillnexis" data-cert-category="internship">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(14, 165, 233, 0.12); border: 1px solid rgba(14, 165, 233, 0.3);">
               <i class="fab fa-python" style="color: #0ea5e9; font-size: 1.2rem;"></i>
@@ -1145,7 +1210,7 @@
         </div>
 
         <!-- 1. TopGrade Innovation - Artificial Intelligence Intern -->
-        <div class="cert-card glass-card" data-cert-category="internship">
+        <div class="cert-card glass-card" data-cert-company="other_company" data-cert-category="internship">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(236, 72, 153, 0.12); border: 1px solid rgba(236, 72, 153, 0.3);">
               <i class="fas fa-brain" style="color: #ec4899; font-size: 1.2rem;"></i>
@@ -1166,7 +1231,7 @@
         </div>
 
         <!-- 2. QSkill / SR India - AI/ML On-Site Intern -->
-        <div class="cert-card glass-card" data-cert-category="internship">
+        <div class="cert-card glass-card" data-cert-company="qskill" data-cert-category="internship">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(139, 92, 246, 0.12); border: 1px solid rgba(139, 92, 246, 0.3);">
               <i class="fas fa-robot" style="color: #8b5cf6; font-size: 1.2rem;"></i>
@@ -1187,7 +1252,7 @@
         </div>
 
         <!-- 3. SkillCraft Technology - Prompt Engineering Intern -->
-        <div class="cert-card glass-card" data-cert-category="internship">
+        <div class="cert-card glass-card" data-cert-company="other_company" data-cert-category="internship">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(59, 130, 246, 0.12); border: 1px solid rgba(59, 130, 246, 0.3);">
               <i class="fas fa-terminal" style="color: #3b82f6; font-size: 1.2rem;"></i>
@@ -1208,7 +1273,7 @@
         </div>
 
         <!-- 4. QSkill / SR India - Front-End Development On-Site Intern -->
-        <div class="cert-card glass-card" data-cert-category="internship">
+        <div class="cert-card glass-card" data-cert-company="qskill" data-cert-category="internship">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(168, 85, 247, 0.12); border: 1px solid rgba(168, 85, 247, 0.3);">
               <i class="fas fa-code" style="color: #a855f7; font-size: 1.2rem;"></i>
@@ -1229,7 +1294,7 @@
         </div>
 
         <!-- 5. Infinity Connects Media - Web Development Intern -->
-        <div class="cert-card glass-card" data-cert-category="internship">
+        <div class="cert-card glass-card" data-cert-company="other_company" data-cert-category="internship">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(14, 165, 233, 0.12); border: 1px solid rgba(14, 165, 233, 0.3);">
               <i class="fas fa-globe" style="color: #0ea5e9; font-size: 1.2rem;"></i>
@@ -1250,7 +1315,7 @@
         </div>
 
         <!-- 6. QSkill / SR India - Python Development Virtual Intern -->
-        <div class="cert-card glass-card" data-cert-category="internship">
+        <div class="cert-card glass-card" data-cert-company="qskill" data-cert-category="internship">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.3);">
               <i class="fab fa-python" style="color: #10b981; font-size: 1.2rem;"></i>
@@ -1271,7 +1336,7 @@
         </div>
 
         <!-- 7. Innoknowvex - Marketing Intern -->
-        <div class="cert-card glass-card" data-cert-category="internship">
+        <div class="cert-card glass-card" data-cert-company="other_company" data-cert-category="internship">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(245, 158, 11, 0.12); border: 1px solid rgba(245, 158, 11, 0.3);">
               <i class="fas fa-bullhorn" style="color: #f59e0b; font-size: 1.2rem;"></i>
@@ -1293,7 +1358,7 @@
         </div>
 
         <!-- 1. MongoDB Vector Search -->
-        <div class="cert-card glass-card" data-cert-category="mongodb" data-cert-featured="true">
+        <div class="cert-card glass-card" data-cert-company="mongodb" data-cert-category="mongodb" data-cert-featured="true">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(19, 170, 82, 0.12); border: 1px solid rgba(19, 170, 82, 0.3);">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1312,7 +1377,7 @@
         </div>
 
         <!-- 2. MongoDB AI Agents -->
-        <div class="cert-card glass-card" data-cert-category="mongodb" data-cert-featured="true">
+        <div class="cert-card glass-card" data-cert-company="mongodb" data-cert-category="mongodb" data-cert-featured="true">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(19, 170, 82, 0.12); border: 1px solid rgba(19, 170, 82, 0.3);">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1331,7 +1396,7 @@
         </div>
 
         <!-- 3. MongoDB RAG Apps -->
-        <div class="cert-card glass-card" data-cert-category="mongodb" data-cert-featured="true">
+        <div class="cert-card glass-card" data-cert-company="mongodb" data-cert-category="mongodb" data-cert-featured="true">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(19, 170, 82, 0.12); border: 1px solid rgba(19, 170, 82, 0.3);">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1350,7 +1415,7 @@
         </div>
 
         <!-- 4. MongoDB Resilient AI Strategy -->
-        <div class="cert-card glass-card" data-cert-category="mongodb" data-cert-featured="true">
+        <div class="cert-card glass-card" data-cert-company="mongodb" data-cert-category="mongodb" data-cert-featured="true">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(19, 170, 82, 0.12); border: 1px solid rgba(19, 170, 82, 0.3);">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1369,7 +1434,7 @@
         </div>
 
         <!-- 5. CRUD Operations in MongoDB -->
-        <div class="cert-card glass-card" data-cert-category="mongodb">
+        <div class="cert-card glass-card" data-cert-company="mongodb" data-cert-category="mongodb">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(19, 170, 82, 0.12); border: 1px solid rgba(19, 170, 82, 0.3);">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1387,7 +1452,7 @@
         </div>
 
         <!-- 6. MongoDB Basics for Students -->
-        <div class="cert-card glass-card" data-cert-category="mongodb">
+        <div class="cert-card glass-card" data-cert-company="mongodb" data-cert-category="mongodb">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(19, 170, 82, 0.12); border: 1px solid rgba(19, 170, 82, 0.3);">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1411,7 +1476,7 @@
         </div>
 
         <!-- 5. Cisco Ethical Hacker -->
-        <div class="cert-card glass-card" data-cert-category="cisco" data-cert-featured="true">
+        <div class="cert-card glass-card" data-cert-company="cisco" data-cert-category="cisco" data-cert-featured="true">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(27, 160, 215, 0.12); border: 1px solid rgba(27, 160, 215, 0.3);">
               <svg width="26" height="18" viewBox="0 0 24 16" fill="#38BDF8" xmlns="http://www.w3.org/2000/svg">
@@ -1430,7 +1495,7 @@
         </div>
 
         <!-- 6. Cisco Industrial Cybersecurity -->
-        <div class="cert-card glass-card" data-cert-category="cisco" data-cert-featured="true">
+        <div class="cert-card glass-card" data-cert-company="cisco" data-cert-category="cisco" data-cert-featured="true">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(27, 160, 215, 0.12); border: 1px solid rgba(27, 160, 215, 0.3);">
               <svg width="26" height="18" viewBox="0 0 24 16" fill="#38BDF8" xmlns="http://www.w3.org/2000/svg">
@@ -1449,7 +1514,7 @@
         </div>
 
         <!-- 7. Cisco AP Cybersecurity -->
-        <div class="cert-card glass-card" data-cert-category="cisco" data-cert-featured="true">
+        <div class="cert-card glass-card" data-cert-company="cisco" data-cert-category="cisco" data-cert-featured="true">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(27, 160, 215, 0.12); border: 1px solid rgba(27, 160, 215, 0.3);">
               <svg width="26" height="18" viewBox="0 0 24 16" fill="#38BDF8" xmlns="http://www.w3.org/2000/svg">
@@ -1468,7 +1533,7 @@
         </div>
 
         <!-- 8. Cisco CCNA 1 -->
-        <div class="cert-card glass-card" data-cert-category="cisco" data-cert-featured="true">
+        <div class="cert-card glass-card" data-cert-company="cisco" data-cert-category="cisco" data-cert-featured="true">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(27, 160, 215, 0.12); border: 1px solid rgba(27, 160, 215, 0.3);">
               <svg width="26" height="18" viewBox="0 0 24 16" fill="#38BDF8" xmlns="http://www.w3.org/2000/svg">
@@ -1487,7 +1552,7 @@
         </div>
 
         <!-- 9. Cisco CCNA 2 -->
-        <div class="cert-card glass-card" data-cert-category="cisco" data-cert-featured="true">
+        <div class="cert-card glass-card" data-cert-company="cisco" data-cert-category="cisco" data-cert-featured="true">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(27, 160, 215, 0.12); border: 1px solid rgba(27, 160, 215, 0.3);">
               <svg width="26" height="18" viewBox="0 0 24 16" fill="#38BDF8" xmlns="http://www.w3.org/2000/svg">
@@ -1506,7 +1571,7 @@
         </div>
 
         <!-- 10. Cisco CCNA 3 -->
-        <div class="cert-card glass-card" data-cert-category="cisco" data-cert-featured="true">
+        <div class="cert-card glass-card" data-cert-company="cisco" data-cert-category="cisco" data-cert-featured="true">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(27, 160, 215, 0.12); border: 1px solid rgba(27, 160, 215, 0.3);">
               <svg width="26" height="18" viewBox="0 0 24 16" fill="#38BDF8" xmlns="http://www.w3.org/2000/svg">
@@ -1531,7 +1596,7 @@
         </div>
 
         <!-- Tata: GenAI Powered Data Analytics Job Simulation (FEATURED) -->
-        <div class="cert-card glass-card" data-cert-category="other" data-cert-featured="true">
+        <div class="cert-card glass-card" data-cert-company="tata" data-cert-category="other" data-cert-featured="true">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(59, 130, 246, 0.12); border: 1px solid rgba(59, 130, 246, 0.3); padding: 4px;">
               <img src="assets/images/companies/tata_logo.png" alt="Tata Logo" style="width: 28px; height: auto; object-fit: contain;">
@@ -1547,8 +1612,25 @@
           </button>
         </div>
 
+                <!-- TCS: CodeVita Season 13 Global Rank Certificate (FEATURED) -->
+        <div class="cert-card glass-card" data-cert-company="tata" data-cert-category="other" data-cert-featured="true">
+          <div class="cert-header-row">
+            <div class="cert-badge-icon" style="background: rgba(59, 130, 246, 0.12); border: 1px solid rgba(59, 130, 246, 0.3); padding: 4px;">
+              <img src="assets/images/companies/tcs_logo.png" alt="TCS Logo" style="width: 34px; height: auto; object-fit: contain;">
+            </div>
+            <span class="cert-issuer-badge" style="background: rgba(59, 130, 246, 0.15); color: #3b82f6; border-color: rgba(59, 130, 246, 0.3);">TCS & TATA</span>
+            <span class="featured-badge-tag"><i class="fas fa-star"></i> Featured</span>
+          </div>
+          <h3 class="cert-title">TCS CodeVita Season XIII — Global Rank Certificate</h3>
+          <span class="cert-org">Tata Consultancy Services (TCS)</span>
+          <span class="cert-date"><i class="far fa-calendar-alt"></i> 2026</span>
+          <button class="btn btn-secondary btn-sm" onclick="openCertModal('TCS CodeVita Season XIII — Global Rank Certificate', 'Tata Consultancy Services (TCS)', '2026', 'Official Rank Certificate awarded for securing Global Rank 13540 in TCS CodeVita Season 13 (The World's Largest Computer Programming Competition) for exceptional algorithmic coding skills.', 'assets/images/certs/cert_tcs_codevita_season_13.jpg')">
+            <i class="fas fa-eye"></i> View Certificate
+          </button>
+        </div>
+
         <!-- Deloitte: Data Analytics Job Simulation (FEATURED) -->
-        <div class="cert-card glass-card" data-cert-category="other" data-cert-featured="true">
+        <div class="cert-card glass-card" data-cert-company="deloitte" data-cert-category="other" data-cert-featured="true">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(134, 188, 37, 0.12); border: 1px solid rgba(134, 188, 37, 0.3); padding: 4px;">
               <img src="assets/images/companies/deloitte_logo.png" alt="Deloitte Logo" style="width: 32px; height: auto; object-fit: contain;">
@@ -1565,7 +1647,7 @@
         </div>
 
         <!-- GUVI: Python Programming Zero to Hero -->
-        <div class="cert-card glass-card" data-cert-category="other">
+        <div class="cert-card glass-card" data-cert-company="guvi" data-cert-category="other">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.3); padding: 4px;">
               <img src="assets/images/companies/guvi_logo.png" alt="GUVI Logo" style="width: 32px; height: auto; object-fit: contain;">
@@ -1581,7 +1663,7 @@
         </div>
 
         <!-- GUVI 1: Claude AI in 90 Minutes Productivity Course (FEATURED) -->
-        <div class="cert-card glass-card" data-cert-category="other" data-cert-featured="true">
+        <div class="cert-card glass-card" data-cert-company="guvi" data-cert-category="other" data-cert-featured="true">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.3); padding: 4px;">
               <img src="assets/images/companies/guvi_logo.png" alt="GUVI Logo" style="width: 32px; height: auto; object-fit: contain;">
@@ -1598,7 +1680,7 @@
         </div>
 
         <!-- GUVI 2: Data Analysis and Processing with Python using Pandas -->
-        <div class="cert-card glass-card" data-cert-category="other">
+        <div class="cert-card glass-card" data-cert-company="guvi" data-cert-category="other">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.3); padding: 4px;">
               <img src="assets/images/companies/guvi_logo.png" alt="GUVI Logo" style="width: 32px; height: auto; object-fit: contain;">
@@ -1614,7 +1696,7 @@
         </div>
 
         <!-- 10.1 thingQbator - Mobile App Development -->
-        <div class="cert-card glass-card" data-cert-category="other">
+        <div class="cert-card glass-card" data-cert-company="thingqbator" data-cert-category="other">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(56, 189, 248, 0.12); border: 1px solid rgba(56, 189, 248, 0.3); padding: 4px;">
               <img src="assets/images/companies/thingqbator_logo.png" alt="thingQbator Logo" style="width: 28px; height: 28px; object-fit: contain;">
@@ -1630,7 +1712,7 @@
         </div>
 
         <!-- 10.2 thingQbator - Machine Learning and Image Processing -->
-        <div class="cert-card glass-card" data-cert-category="other">
+        <div class="cert-card glass-card" data-cert-company="thingqbator" data-cert-category="other">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(168, 85, 247, 0.12); border: 1px solid rgba(168, 85, 247, 0.3); padding: 4px;">
               <img src="assets/images/companies/thingqbator_logo.png" alt="thingQbator Logo" style="width: 28px; height: 28px; object-fit: contain;">
@@ -1646,7 +1728,7 @@
         </div>
 
         <!-- 10.3 thingQbator - HTML & CSS -->
-        <div class="cert-card glass-card" data-cert-category="other">
+        <div class="cert-card glass-card" data-cert-company="thingqbator" data-cert-category="other">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(245, 158, 11, 0.12); border: 1px solid rgba(245, 158, 11, 0.3); padding: 4px;">
               <img src="assets/images/companies/thingqbator_logo.png" alt="thingQbator Logo" style="width: 28px; height: 28px; object-fit: contain;">
@@ -1662,7 +1744,7 @@
         </div>
 
         <!-- 10.4 thingQbator - An Introduction to Embedded Systems -->
-        <div class="cert-card glass-card" data-cert-category="other">
+        <div class="cert-card glass-card" data-cert-company="thingqbator" data-cert-category="other">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.3); padding: 4px;">
               <img src="assets/images/companies/thingqbator_logo.png" alt="thingQbator Logo" style="width: 28px; height: 28px; object-fit: contain;">
@@ -1678,7 +1760,7 @@
         </div>
 
         <!-- thingQbator - Full Stack Development with MEAN -->
-        <div class="cert-card glass-card" data-cert-category="other">
+        <div class="cert-card glass-card" data-cert-company="thingqbator" data-cert-category="other">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(220, 38, 38, 0.12); border: 1px solid rgba(220, 38, 38, 0.3); padding: 4px;">
               <img src="assets/images/companies/thingqbator_logo.png" alt="thingQbator Logo" style="width: 28px; height: 28px; object-fit: contain;">
@@ -1694,7 +1776,7 @@
         </div>
 
         <!-- thingQbator - Full Stack Development with MERN -->
-        <div class="cert-card glass-card" data-cert-category="other">
+        <div class="cert-card glass-card" data-cert-company="thingqbator" data-cert-category="other">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(6, 182, 212, 0.12); border: 1px solid rgba(6, 182, 212, 0.3); padding: 4px;">
               <img src="assets/images/companies/thingqbator_logo.png" alt="thingQbator Logo" style="width: 28px; height: 28px; object-fit: contain;">
@@ -1710,7 +1792,7 @@
         </div>
 
         <!-- Coursera 1: WordPress Website Development (FEATURED) -->
-        <div class="cert-card glass-card" data-cert-category="other" data-cert-featured="true">
+        <div class="cert-card glass-card" data-cert-company="coursera" data-cert-category="other" data-cert-featured="true">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(0, 86, 210, 0.12); border: 1px solid rgba(0, 86, 210, 0.3);">
               <img src="assets/images/companies/coursera_logo.png" alt="Coursera Logo" style="width: 24px; height: 24px; object-fit: contain; border-radius: 4px;">
@@ -1727,7 +1809,7 @@
         </div>
 
         <!-- Coursera 2: Microsoft Azure Computer Vision App (FEATURED) -->
-        <div class="cert-card glass-card" data-cert-category="other" data-cert-featured="true">
+        <div class="cert-card glass-card" data-cert-company="coursera" data-cert-category="other" data-cert-featured="true">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(0, 120, 212, 0.12); border: 1px solid rgba(0, 120, 212, 0.3);">
               <img src="assets/images/companies/coursera_logo.png" alt="Coursera Logo" style="width: 24px; height: 24px; object-fit: contain; border-radius: 4px;">
@@ -1744,7 +1826,7 @@
         </div>
 
         <!-- 11. Oracle Certified Foundations Associate -->
-        <div class="cert-card glass-card" data-cert-category="other" data-cert-featured="true">
+        <div class="cert-card glass-card" data-cert-company="oracle" data-cert-category="other" data-cert-featured="true">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(234, 27, 35, 0.12); border: 1px solid rgba(234, 27, 35, 0.3);">
               <svg width="26" height="18" viewBox="0 0 24 16" fill="#F87171" xmlns="http://www.w3.org/2000/svg">
@@ -1763,7 +1845,7 @@
         </div>
 
         <!-- 12. Infosys Python Concurrent Programming -->
-        <div class="cert-card glass-card" data-cert-category="other" data-cert-featured="true">
+        <div class="cert-card glass-card" data-cert-company="infosys" data-cert-category="other" data-cert-featured="true">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(0, 124, 195, 0.12); border: 1px solid rgba(0, 124, 195, 0.3);">
               <img src="assets/images/companies/infosys_logo.png" alt="Infosys Springboard Logo" style="width: 24px; height: 24px; object-fit: contain;">
@@ -1780,7 +1862,7 @@
         </div>
 
         <!-- 13. Infosys Securing the Backend Layers -->
-        <div class="cert-card glass-card" data-cert-category="other" data-cert-featured="true">
+        <div class="cert-card glass-card" data-cert-company="infosys" data-cert-category="other" data-cert-featured="true">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(0, 124, 195, 0.12); border: 1px solid rgba(0, 124, 195, 0.3);">
               <img src="assets/images/companies/infosys_logo.png" alt="Infosys Springboard Logo" style="width: 24px; height: 24px; object-fit: contain;">
@@ -1797,7 +1879,7 @@
         </div>
 
         <!-- 14. Cisco Python Essentials 1 -->
-        <div class="cert-card glass-card" data-cert-category="other" data-cert-featured="true">
+        <div class="cert-card glass-card" data-cert-company="cisco" data-cert-category="other" data-cert-featured="true">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(27, 160, 215, 0.12); border: 1px solid rgba(27, 160, 215, 0.3);">
               <i class="fab fa-python" style="color: #38bdf8; font-size: 1.2rem;"></i>
@@ -1814,7 +1896,7 @@
         </div>
 
         <!-- 15. Cisco Python Essentials 2 -->
-        <div class="cert-card glass-card" data-cert-category="other" data-cert-featured="true">
+        <div class="cert-card glass-card" data-cert-company="cisco" data-cert-category="other" data-cert-featured="true">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(27, 160, 215, 0.12); border: 1px solid rgba(27, 160, 215, 0.3);">
               <i class="fab fa-python" style="color: #38bdf8; font-size: 1.2rem;"></i>
@@ -1831,7 +1913,7 @@
         </div>
 
         <!-- 16. Infosys Advanced Data Structures & Algorithms in Python -->
-        <div class="cert-card glass-card" data-cert-category="other">
+        <div class="cert-card glass-card" data-cert-company="infosys" data-cert-category="other">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(0, 124, 195, 0.12); border: 1px solid rgba(0, 124, 195, 0.3);">
               <img src="assets/images/companies/infosys_logo.png" alt="Infosys Springboard Logo" style="width: 24px; height: 24px; object-fit: contain;">
@@ -1847,7 +1929,7 @@
         </div>
 
         <!-- 17. Infosys Data Structures & Algorithms in Python: Implementing Trees & Graphs -->
-        <div class="cert-card glass-card" data-cert-category="other">
+        <div class="cert-card glass-card" data-cert-company="infosys" data-cert-category="other">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(0, 124, 195, 0.12); border: 1px solid rgba(0, 124, 195, 0.3);">
               <img src="assets/images/companies/infosys_logo.png" alt="Infosys Springboard Logo" style="width: 24px; height: 24px; object-fit: contain;">
@@ -1863,7 +1945,7 @@
         </div>
 
         <!-- 18. Infosys Data Management -->
-        <div class="cert-card glass-card" data-cert-category="other">
+        <div class="cert-card glass-card" data-cert-company="infosys" data-cert-category="other">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(0, 124, 195, 0.12); border: 1px solid rgba(0, 124, 195, 0.3);">
               <img src="assets/images/companies/infosys_logo.png" alt="Infosys Springboard Logo" style="width: 24px; height: 24px; object-fit: contain;">
@@ -1879,7 +1961,7 @@
         </div>
 
         <!-- 19. Infosys Basics of Electronics & Programming -->
-        <div class="cert-card glass-card" data-cert-category="other">
+        <div class="cert-card glass-card" data-cert-company="infosys" data-cert-category="other">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(0, 124, 195, 0.12); border: 1px solid rgba(0, 124, 195, 0.3);">
               <img src="assets/images/companies/infosys_logo.png" alt="Infosys Springboard Logo" style="width: 24px; height: 24px; object-fit: contain;">
@@ -1895,7 +1977,7 @@
         </div>
 
         <!-- 20. Infosys Creative Thinking -->
-        <div class="cert-card glass-card" data-cert-category="other">
+        <div class="cert-card glass-card" data-cert-company="infosys" data-cert-category="other">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(0, 124, 195, 0.12); border: 1px solid rgba(0, 124, 195, 0.3);">
               <img src="assets/images/companies/infosys_logo.png" alt="Infosys Springboard Logo" style="width: 24px; height: 24px; object-fit: contain;">
@@ -1911,7 +1993,7 @@
         </div>
 
         <!-- Skill Nexis - Weekly Innovation Challenge #1 WINNER (FEATURED) -->
-        <div class="cert-card glass-card" data-cert-category="webinar" data-cert-featured="true">
+        <div class="cert-card glass-card" data-cert-company="skillnexis" data-cert-category="webinar" data-cert-featured="true">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(245, 158, 11, 0.12); border: 1px solid rgba(245, 158, 11, 0.3);">
               <i class="fas fa-trophy" style="color: #f59e0b; font-size: 1.2rem;"></i>
@@ -1928,7 +2010,7 @@
         </div>
 
         <!-- ECLearnix Masterclass: Hands-On AI Tools for Academic Writing -->
-        <div class="cert-card glass-card" data-cert-category="webinar">
+        <div class="cert-card glass-card" data-cert-company="other_company" data-cert-category="webinar">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(168, 85, 247, 0.12); border: 1px solid rgba(168, 85, 247, 0.3);">
               <i class="fas fa-graduation-cap" style="color: #a855f7; font-size: 1.2rem;"></i>
@@ -1944,7 +2026,7 @@
         </div>
 
         <!-- 21. Infosys Data Structures & Algorithms in Python: Sorting Algorithms -->
-        <div class="cert-card glass-card" data-cert-category="other">
+        <div class="cert-card glass-card" data-cert-company="infosys" data-cert-category="other">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(0, 124, 195, 0.12); border: 1px solid rgba(0, 124, 195, 0.3);">
               <img src="assets/images/companies/infosys_logo.png" alt="Infosys Springboard Logo" style="width: 24px; height: 24px; object-fit: contain;">
@@ -1960,7 +2042,7 @@
         </div>
 
         <!-- 22. Infosys Mastering Palo Alto Networks -->
-        <div class="cert-card glass-card" data-cert-category="other">
+        <div class="cert-card glass-card" data-cert-company="infosys" data-cert-category="other">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(0, 124, 195, 0.12); border: 1px solid rgba(0, 124, 195, 0.3);">
               <img src="assets/images/companies/infosys_logo.png" alt="Infosys Springboard Logo" style="width: 24px; height: 24px; object-fit: contain;">
@@ -1976,7 +2058,7 @@
         </div>
 
         <!-- 23. Infosys Programming Fundamentals: Command Line Interface & OS Commands -->
-        <div class="cert-card glass-card" data-cert-category="other">
+        <div class="cert-card glass-card" data-cert-company="infosys" data-cert-category="other">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(0, 124, 195, 0.12); border: 1px solid rgba(0, 124, 195, 0.3);">
               <img src="assets/images/companies/infosys_logo.png" alt="Infosys Springboard Logo" style="width: 24px; height: 24px; object-fit: contain;">
@@ -1992,7 +2074,7 @@
         </div>
 
         <!-- 24. Infosys R Data Structures -->
-        <div class="cert-card glass-card" data-cert-category="other">
+        <div class="cert-card glass-card" data-cert-company="infosys" data-cert-category="other">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(0, 124, 195, 0.12); border: 1px solid rgba(0, 124, 195, 0.3);">
               <img src="assets/images/companies/infosys_logo.png" alt="Infosys Springboard Logo" style="width: 24px; height: 24px; object-fit: contain;">
@@ -2014,7 +2096,7 @@
         </div>
 
         <!-- 25. Turnip Innovations & AICTE Patent Course -->
-        <div class="cert-card glass-card" data-cert-category="webinar">
+        <div class="cert-card glass-card" data-cert-company="turnip" data-cert-category="webinar">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(245, 158, 11, 0.12); border: 1px solid rgba(245, 158, 11, 0.3);">
               <i class="fas fa-lightbulb" style="color: #f59e0b; font-size: 1.2rem;"></i>
@@ -2030,7 +2112,7 @@
         </div>
 
         <!-- 26. Entrepreneurship Foundations for Deep Tech Startups -->
-        <div class="cert-card glass-card" data-cert-category="webinar">
+        <div class="cert-card glass-card" data-cert-company="turnip" data-cert-category="webinar">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(59, 130, 246, 0.12); border: 1px solid rgba(59, 130, 246, 0.3);">
               <i class="fas fa-rocket" style="color: #3b82f6; font-size: 1.2rem;"></i>
@@ -2046,7 +2128,7 @@
         </div>
 
         <!-- 27. Codeathon25 - Path to Programming Excellence -->
-        <div class="cert-card glass-card" data-cert-category="webinar">
+        <div class="cert-card glass-card" data-cert-company="veltech" data-cert-category="webinar">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(139, 92, 246, 0.12); border: 1px solid rgba(139, 92, 246, 0.3);">
               <i class="fas fa-laptop-code" style="color: #8b5cf6; font-size: 1.2rem;"></i>
@@ -2062,7 +2144,7 @@
         </div>
 
         <!-- 28. UX Surgery - Interface Redesign Sprint -->
-        <div class="cert-card glass-card" data-cert-category="webinar">
+        <div class="cert-card glass-card" data-cert-company="veltech" data-cert-category="webinar">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(236, 72, 153, 0.12); border: 1px solid rgba(236, 72, 153, 0.3);">
               <i class="fas fa-paint-brush" style="color: #ec4899; font-size: 1.2rem;"></i>
@@ -2078,7 +2160,7 @@
         </div>
 
         <!-- 29. Turnip Innovations - AI for Software Engineers -->
-        <div class="cert-card glass-card" data-cert-category="webinar">
+        <div class="cert-card glass-card" data-cert-company="turnip" data-cert-category="webinar">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(168, 85, 247, 0.12); border: 1px solid rgba(168, 85, 247, 0.3);">
               <i class="fas fa-brain" style="color: #a855f7; font-size: 1.2rem;"></i>
@@ -2094,7 +2176,7 @@
         </div>
 
         <!-- 30. Independence Day Webinar 2025: Building National Incubation Ecosystems -->
-        <div class="cert-card glass-card" data-cert-category="webinar">
+        <div class="cert-card glass-card" data-cert-company="turnip" data-cert-category="webinar">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.3);">
               <i class="fas fa-flag" style="color: #10b981; font-size: 1.2rem;"></i>
@@ -2110,7 +2192,7 @@
         </div>
 
         <!-- Independence Day Webinar 2026: Future Startup Ecosystems -->
-        <div class="cert-card glass-card" data-cert-category="webinar">
+        <div class="cert-card glass-card" data-cert-company="turnip" data-cert-category="webinar">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.3);">
               <i class="fas fa-flag" style="color: #10b981; font-size: 1.2rem;"></i>
@@ -2126,7 +2208,7 @@
         </div>
 
         <!-- Turnip & Qualcomm: World IP Day 2026 -->
-        <div class="cert-card glass-card" data-cert-category="webinar">
+        <div class="cert-card glass-card" data-cert-company="turnip" data-cert-category="webinar">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(59, 130, 246, 0.12); border: 1px solid rgba(59, 130, 246, 0.3);">
               <i class="fas fa-gavel" style="color: #3b82f6; font-size: 1.2rem;"></i>
@@ -2142,7 +2224,7 @@
         </div>
 
         <!-- Naukri Campus: GenQuezt Independence Day Quiz -->
-        <div class="cert-card glass-card" data-cert-category="webinar">
+        <div class="cert-card glass-card" data-cert-company="naukri" data-cert-category="webinar">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(59, 130, 246, 0.12); border: 1px solid rgba(59, 130, 246, 0.3); padding: 4px;">
               <img src="assets/images/companies/naukri_campus_logo.png" alt="Naukri Campus Logo" style="width: 32px; height: auto; object-fit: contain;">
@@ -2158,7 +2240,7 @@
         </div>
 
         <!-- Naukri Campus: TechQuezt #33 -->
-        <div class="cert-card glass-card" data-cert-category="webinar">
+        <div class="cert-card glass-card" data-cert-company="naukri" data-cert-category="webinar">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(59, 130, 246, 0.12); border: 1px solid rgba(59, 130, 246, 0.3); padding: 4px;">
               <img src="assets/images/companies/naukri_campus_logo.png" alt="Naukri Campus Logo" style="width: 32px; height: auto; object-fit: contain;">
@@ -2174,7 +2256,7 @@
         </div>
 
         <!-- Poornima University & ECLearnix: Enhancing Scalability and Consistency Using Distributed Databases -->
-        <div class="cert-card glass-card" data-cert-category="webinar">
+        <div class="cert-card glass-card" data-cert-company="other_company" data-cert-category="webinar">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(168, 85, 247, 0.12); border: 1px solid rgba(168, 85, 247, 0.3);">
               <i class="fas fa-database" style="color: #a855f7; font-size: 1.2rem;"></i>
@@ -2190,7 +2272,7 @@
         </div>
 
         <!-- Unstop & CampusCrew: QuizOff 2026 - India's Biggest AI Quiz -->
-        <div class="cert-card glass-card" data-cert-category="webinar">
+        <div class="cert-card glass-card" data-cert-company="naukri" data-cert-category="webinar">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(14, 165, 233, 0.12); border: 1px solid rgba(14, 165, 233, 0.3); padding: 4px;">
               <img src="assets/images/companies/unstop_logo.png" alt="Unstop Logo" style="width: 32px; height: auto; object-fit: contain;">
@@ -2206,7 +2288,7 @@
         </div>
 
         <!-- 31. L2Pro India IPR Career Summit 2025 -->
-        <div class="cert-card glass-card" data-cert-category="webinar">
+        <div class="cert-card glass-card" data-cert-company="turnip" data-cert-category="webinar">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(59, 130, 246, 0.12); border: 1px solid rgba(59, 130, 246, 0.3);">
               <i class="fas fa-gavel" style="color: #3b82f6; font-size: 1.2rem;"></i>
@@ -2222,7 +2304,7 @@
         </div>
 
         <!-- 32. From Idea to Product: A Design Thinking Approach -->
-        <div class="cert-card glass-card" data-cert-category="webinar">
+        <div class="cert-card glass-card" data-cert-company="veltech" data-cert-category="webinar">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(245, 158, 11, 0.12); border: 1px solid rgba(245, 158, 11, 0.3);">
               <i class="fas fa-lightbulb" style="color: #f59e0b; font-size: 1.2rem;"></i>
@@ -2238,7 +2320,7 @@
         </div>
 
         <!-- 33. Building a Scalable Business Model -->
-        <div class="cert-card glass-card" data-cert-category="webinar">
+        <div class="cert-card glass-card" data-cert-company="veltech" data-cert-category="webinar">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.3);">
               <i class="fas fa-chart-line" style="color: #10b981; font-size: 1.2rem;"></i>
@@ -2254,7 +2336,7 @@
         </div>
 
         <!-- 34. Infosys Creative Thinking -->
-        <div class="cert-card glass-card" data-cert-category="webinar">
+        <div class="cert-card glass-card" data-cert-company="infosys" data-cert-category="webinar">
           <div class="cert-header-row">
             <div class="cert-badge-icon" style="background: rgba(0, 124, 195, 0.12); border: 1px solid rgba(0, 124, 195, 0.3);">
               <img src="assets/images/companies/infosys_logo.png" alt="Infosys Springboard Logo" style="width: 24px; height: 24px; object-fit: contain;">
@@ -2403,7 +2485,7 @@
       <div class="stats-grid">
         <div class="stat-card glass-card">
           <i class="fas fa-project-diagram stat-icon"></i>
-          <span class="stat-number" data-target="4">0</span>
+          <span class="stat-number" data-target="5">0</span>
           <span class="stat-label">Academic Projects</span>
         </div>
 
@@ -2421,7 +2503,7 @@
 
         <div class="stat-card glass-card">
           <i class="fas fa-certificate stat-icon"></i>
-          <span class="stat-number" data-target="66">0</span>
+          <span class="stat-number" data-target="67">0</span>
           <span class="stat-label">Certifications Earned</span>
         </div>
 

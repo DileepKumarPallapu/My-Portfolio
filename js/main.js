@@ -264,46 +264,91 @@ function initProjectsFilter() {
 }
 
 function initCertificatesFilter() {
-  const filterBtns = document.querySelectorAll('[data-cert-filter]');
+  const categoryBtns = document.querySelectorAll('[data-cert-filter]');
+  const companyBtns = document.querySelectorAll('[data-company-filter]');
   const certCards = document.querySelectorAll('.cert-card');
   const domainHeaders = document.querySelectorAll('.cert-domain-header');
+  const indicator = document.getElementById('active-company-indicator');
 
-  if (!filterBtns.length || !certCards.length) return;
+  if (!certCards.length) return;
 
-  filterBtns.forEach(btn => {
+  let currentCategory = 'all';
+  let currentCompany = 'all';
+
+  function applyFilters() {
+    let visibleCount = 0;
+
+    certCards.forEach(card => {
+      const isFeatured = card.dataset.certFeatured === 'true';
+      const category = card.dataset.certCategory;
+      const company = card.dataset.certCompany;
+
+      // Check category match
+      let matchCategory = false;
+      if (currentCategory === 'all') {
+        matchCategory = true;
+      } else if (currentCategory === 'featured') {
+        matchCategory = isFeatured;
+      } else if (category === currentCategory) {
+        matchCategory = true;
+      }
+
+      // Check company match
+      let matchCompany = false;
+      if (currentCompany === 'all' || company === currentCompany) {
+        matchCompany = true;
+      }
+
+      if (matchCategory && matchCompany) {
+        card.style.display = 'flex';
+        card.style.animation = 'fadeIn 0.4s ease forwards';
+        visibleCount++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    // Update domain headers visibility
+    domainHeaders.forEach(header => {
+      const headerCategory = header.dataset.certDomain;
+      if (currentCompany !== 'all') {
+        header.style.display = 'none';
+      } else if (currentCategory === 'all') {
+        header.style.display = 'flex';
+      } else if (currentCategory === 'featured') {
+        header.style.display = headerCategory === 'featured' ? 'flex' : 'none';
+      } else if (headerCategory === currentCategory) {
+        header.style.display = 'flex';
+      } else {
+        header.style.display = 'none';
+      }
+    });
+
+    // Update indicator text
+    if (indicator) {
+      const activeCatText = document.querySelector('[data-cert-filter].active')?.textContent.trim().split('(')[0].trim() || 'All';
+      const activeCompText = document.querySelector('[data-company-filter].active')?.textContent.trim().split('(')[0].trim() || 'All Issuers';
+      indicator.textContent = `Showing: ${visibleCount} credentials (${activeCompText} · ${activeCatText})`;
+    }
+  }
+
+  // Category buttons click handler
+  categoryBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
+      categoryBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
+      currentCategory = btn.dataset.certFilter;
+      applyFilters();
+    });
+  });
 
-      const filter = btn.dataset.certFilter;
-
-      certCards.forEach(card => {
-        const isFeatured = card.dataset.certFeatured === 'true';
-        const category = card.dataset.certCategory;
-
-        if (filter === 'all') {
-          card.style.display = 'flex';
-        } else if (filter === 'featured') {
-          card.style.display = isFeatured ? 'flex' : 'none';
-        } else if (category === filter) {
-          card.style.display = 'flex';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-
-      domainHeaders.forEach(header => {
-        const headerCategory = header.dataset.certDomain;
-        if (filter === 'all') {
-          header.style.display = 'flex';
-        } else if (filter === 'featured') {
-          header.style.display = headerCategory === 'featured' ? 'flex' : 'none';
-        } else if (headerCategory === filter) {
-          header.style.display = 'flex';
-        } else {
-          header.style.display = 'none';
-        }
-      });
+  // Company buttons click handler
+  companyBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      companyBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentCompany = btn.dataset.companyFilter;
+      applyFilters();
     });
   });
 }
