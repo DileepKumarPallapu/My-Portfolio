@@ -167,7 +167,7 @@
           <a href="#projects" class="btn btn-primary">
             <i class="fas fa-rocket"></i> View Projects
           </a>
-          <a href="assets/docs/Pallapu_Dileep_Kumar_Resume.pdf" download="Pallapu_Dileep_Kumar_Resume.pdf" class="btn btn-secondary">
+          <a href="resumes/master-resume.pdf" download="Pallapu_Dileep_Kumar_Master_Resume.pdf" class="btn btn-secondary" aria-label="Download Master Resume">
             <i class="fas fa-file-download"></i> Download Resume
           </a>
           <a href="#contact" class="btn btn-secondary">
@@ -2473,20 +2473,25 @@
       <div class="section-header">
         <span class="section-badge"><i class="fas fa-file-alt"></i> Curriculum Vitae</span>
         <h2 class="section-title">My <span class="gradient-text">Resume</span></h2>
-        <p class="section-subtitle">Preview or download my official resume detailing my AI/ML background, full-stack engineering skills, education, and credentials.</p>
+        <p class="section-subtitle">A complete overview of my technical skills, projects, internships, certifications, education and experience across software development, AI/ML, web development and cybersecurity.</p>
       </div>
 
-      <div class="resume-container" style="display: flex; justify-content: center;">
-        <div class="glass-card" style="padding: 2.5rem 2rem; display: flex; flex-direction: column; align-items: center; gap: 1.8rem; max-width: 900px; width: 100%; border: 1px solid rgba(56, 189, 248, 0.25);">
+      <div class="resume-container" style="display: flex; flex-direction: column; align-items: center; width: 100%;">
+        
+        <!-- 1. PRIMARY RESUME — MASTER RESUME (Visually Prominent) -->
+        <div class="glass-card master-resume-card" style="padding: 2.5rem 2rem; display: flex; flex-direction: column; align-items: center; gap: 1.8rem; max-width: 920px; width: 100%; border: 1.5px solid rgba(56, 189, 248, 0.35); box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(56, 189, 248, 0.15); border-radius: 20px;">
           
           <div style="display: flex; align-items: center; justify-content: space-between; width: 100%; flex-wrap: wrap; gap: 0.8rem; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 1.2rem;">
             <div style="display: flex; align-items: center; gap: 1rem;">
-              <div style="width: 52px; height: 52px; border-radius: 12px; background: var(--gradient-primary); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);">
+              <div style="width: 56px; height: 56px; border-radius: 14px; background: var(--gradient-primary); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; box-shadow: 0 4px 20px rgba(59, 130, 246, 0.45);">
                 <i class="fas fa-file-pdf"></i>
               </div>
               <div>
-                <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 0.2rem;">Pallapu Dileep Kumar — Master Resume</h3>
-                <p style="color: var(--accent-cyan); font-size: 0.88rem; font-weight: 600;">Computer Science & Engineering Student — Software Developer — AI Enthusiast</p>
+                <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+                  <h3 style="font-size: 1.4rem; font-weight: 800; margin: 0; color: #ffffff;">Master Resume</h3>
+                  <span style="font-size: 0.72rem; background: rgba(56, 189, 248, 0.15); color: #38bdf8; padding: 0.15rem 0.5rem; border-radius: 9999px; border: 1px solid rgba(56, 189, 248, 0.3); font-weight: 700;">★ Recommended</span>
+                </div>
+                <p style="color: var(--accent-cyan); font-size: 0.95rem; font-weight: 600; margin-top: 0.2rem;">All-Round Software Engineering Resume</p>
               </div>
             </div>
             <span style="font-size: 0.82rem; background: rgba(16, 185, 129, 0.15); color: #10b981; padding: 0.35rem 0.85rem; border-radius: var(--radius-full); border: 1px solid rgba(16, 185, 129, 0.35); font-weight: 700; display: inline-flex; align-items: center; gap: 0.4rem;">
@@ -2494,11 +2499,15 @@
             </span>
           </div>
 
+          <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; text-align: center; max-width: 780px;">
+            A complete overview of my software development, full-stack, Java, Python, AI/ML, web development, data and cybersecurity experience.
+          </p>
+
           <!-- 3-Page Master Resume Visual Preview Gallery -->
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.2rem; width: 100%;">
             <!-- Page 1 Preview -->
             <div style="border-radius: var(--radius-md); overflow: hidden; border: 1px solid rgba(255,255,255,0.12); box-shadow: 0 8px 24px rgba(0,0,0,0.35); position: relative; cursor: pointer;" onclick="openCertModal('Master Resume (Page 1 of 3)', 'Pallapu Dileep Kumar', '24 August 2026', 'Master Resume Page 1: Professional Summary, Education (Vel Tech, Sri Chaitanya, Kids Patasala), Technical Skills, and Industry Internships (Cisco, Skill Nexis, QSkill, Infinity Connects, SkillCraft, TopGrade).', 'assets/images/resume_page_1.png')">
-              <img src="assets/images/resume_page_1.png" alt="Resume Page 1" style="width: 100%; height: auto; display: block; transition: transform 0.4s ease;">
+              <img src="assets/images/resume_page_1.png" alt="Master Resume Page 1 Preview" style="width: 100%; height: auto; display: block;">
               <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(0deg, rgba(15,23,42,0.95), transparent); padding: 1rem 0.8rem 0.6rem; text-align: center; color: #fff; font-size: 0.82rem; font-weight: 600;">
                 <i class="fas fa-search-plus"></i> Page 1 (Summary & Internships)
               </div>
@@ -2506,7 +2515,7 @@
 
             <!-- Page 2 Preview -->
             <div style="border-radius: var(--radius-md); overflow: hidden; border: 1px solid rgba(255,255,255,0.12); box-shadow: 0 8px 24px rgba(0,0,0,0.35); position: relative; cursor: pointer;" onclick="openCertModal('Master Resume (Page 2 of 3)', 'Pallapu Dileep Kumar', '24 August 2026', 'Master Resume Page 2: Projects (Smart Campus Event, Smart Attendance, Zentro Hub, AI Portfolio, Voice Assistant, Chatbot, ML Models) and Selected AI/ML, Software, Web & Cybersecurity Certifications.', 'assets/images/resume_page_2.png')">
-              <img src="assets/images/resume_page_2.png" alt="Resume Page 2" style="width: 100%; height: auto; display: block; transition: transform 0.4s ease;">
+              <img src="assets/images/resume_page_2.png" alt="Master Resume Page 2 Preview" style="width: 100%; height: auto; display: block;">
               <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(0deg, rgba(15,23,42,0.95), transparent); padding: 1rem 0.8rem 0.6rem; text-align: center; color: #fff; font-size: 0.82rem; font-weight: 600;">
                 <i class="fas fa-search-plus"></i> Page 2 (Projects & Certifications)
               </div>
@@ -2514,24 +2523,145 @@
 
             <!-- Page 3 Preview -->
             <div style="border-radius: var(--radius-md); overflow: hidden; border: 1px solid rgba(255,255,255,0.12); box-shadow: 0 8px 24px rgba(0,0,0,0.35); position: relative; cursor: pointer;" onclick="openCertModal('Master Resume (Page 3 of 3)', 'Pallapu Dileep Kumar', '24 August 2026', 'Master Resume Page 3: Networking & Professional Simulations (Cisco, Tata, Deloitte, Turnip, Vel Tech), Achievements (#1 Winner, TCS CodeVita), and Online Profiles.', 'assets/images/resume_page_3.png')">
-              <img src="assets/images/resume_page_3.png" alt="Resume Page 3" style="width: 100%; height: auto; display: block; transition: transform 0.4s ease;">
+              <img src="assets/images/resume_page_3.png" alt="Master Resume Page 3 Preview" style="width: 100%; height: auto; display: block;">
               <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(0deg, rgba(15,23,42,0.95), transparent); padding: 1rem 0.8rem 0.6rem; text-align: center; color: #fff; font-size: 0.82rem; font-weight: 600;">
                 <i class="fas fa-search-plus"></i> Page 3 (Achievements & Profiles)
               </div>
             </div>
           </div>
 
-          <!-- Resume CTA Buttons -->
+          <!-- Master Resume Primary Actions -->
           <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; width: 100%; margin-top: 0.5rem;">
-            <a href="assets/docs/Pallapu_Dileep_Kumar_Master_Resume.pdf" download="Pallapu_Dileep_Kumar_Master_Resume.pdf" class="btn btn-primary">
-              <i class="fas fa-download"></i> Download Master Resume PDF
+            <a href="resumes/master-resume.pdf" download="Pallapu_Dileep_Kumar_Master_Resume.pdf" class="btn btn-primary" aria-label="Download Master Resume">
+              <i class="fas fa-file-download"></i> Download Master Resume
             </a>
-            <a href="assets/docs/Pallapu_Dileep_Kumar_Master_Resume.pdf" target="_blank" class="btn btn-secondary">
+            <a href="resumes/master-resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" aria-label="Open Master Resume Fullscreen in New Tab">
               <i class="fas fa-external-link-alt"></i> Open Fullscreen PDF
             </a>
           </div>
 
         </div>
+
+        <!-- 2. SPECIALIZED RESUME VERSIONS -->
+        <div class="specialized-resumes-section">
+          <div class="specialized-header">
+            <h3><i class="fas fa-briefcase" style="color: #38bdf8;"></i> Specialized Resume Versions</h3>
+            <p>Tailored resumes for specific technical roles. Choose a resume tailored to the role you're applying for.</p>
+          </div>
+
+          <div class="specialized-grid">
+            
+            <!-- Card 1: Full-Stack Developer -->
+            <div class="specialized-card glass-card">
+              <div class="specialized-card-top">
+                <div class="specialized-icon" style="background: rgba(59, 130, 246, 0.15); color: #3b82f6; border: 1px solid rgba(59, 130, 246, 0.3);">
+                  <i class="fas fa-layer-group"></i>
+                </div>
+                <div>
+                  <h4 class="specialized-card-title">Full-Stack Developer Resume</h4>
+                </div>
+              </div>
+              <p class="specialized-card-desc">Java, Spring Boot, React, REST APIs, MySQL & MongoDB</p>
+              <div class="specialized-card-action">
+                <a href="resumes/full-stack-developer-resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-view-resume" aria-label="View Full-Stack Developer Resume">
+                  <i class="fas fa-file-pdf"></i> View Resume
+                </a>
+              </div>
+            </div>
+
+            <!-- Card 2: Java / Spring Boot Developer -->
+            <div class="specialized-card glass-card">
+              <div class="specialized-card-top">
+                <div class="specialized-icon" style="background: rgba(248, 152, 32, 0.15); color: #f89820; border: 1px solid rgba(248, 152, 32, 0.3);">
+                  <i class="fab fa-java"></i>
+                </div>
+                <div>
+                  <h4 class="specialized-card-title">Java / Spring Boot Resume</h4>
+                </div>
+              </div>
+              <p class="specialized-card-desc">Java, Spring Boot, Spring MVC, JPA, REST APIs & MySQL</p>
+              <div class="specialized-card-action">
+                <a href="resumes/java-spring-boot-resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-view-resume" aria-label="View Java Spring Boot Resume">
+                  <i class="fas fa-file-pdf"></i> View Resume
+                </a>
+              </div>
+            </div>
+
+            <!-- Card 3: AI / Machine Learning -->
+            <div class="specialized-card glass-card">
+              <div class="specialized-card-top">
+                <div class="specialized-icon" style="background: rgba(139, 92, 246, 0.15); color: #8b5cf6; border: 1px solid rgba(139, 92, 246, 0.3);">
+                  <i class="fas fa-brain"></i>
+                </div>
+                <div>
+                  <h4 class="specialized-card-title">AI / Machine Learning Resume</h4>
+                </div>
+              </div>
+              <p class="specialized-card-desc">Python, Machine Learning, NLP, AI Agents, RAG & Data Science</p>
+              <div class="specialized-card-action">
+                <a href="resumes/ai-ml-resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-view-resume" aria-label="View AI Machine Learning Resume">
+                  <i class="fas fa-file-pdf"></i> View Resume
+                </a>
+              </div>
+            </div>
+
+            <!-- Card 4: Front-End Developer -->
+            <div class="specialized-card glass-card">
+              <div class="specialized-card-top">
+                <div class="specialized-icon" style="background: rgba(14, 165, 233, 0.15); color: #0ea5e9; border: 1px solid rgba(14, 165, 233, 0.3);">
+                  <i class="fab fa-react"></i>
+                </div>
+                <div>
+                  <h4 class="specialized-card-title">Front-End Developer Resume</h4>
+                </div>
+              </div>
+              <p class="specialized-card-desc">HTML, CSS, JavaScript, React, Bootstrap & Tailwind CSS</p>
+              <div class="specialized-card-action">
+                <a href="resumes/frontend-developer-resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-view-resume" aria-label="View Front-End Developer Resume">
+                  <i class="fas fa-file-pdf"></i> View Resume
+                </a>
+              </div>
+            </div>
+
+            <!-- Card 5: Python / Data -->
+            <div class="specialized-card glass-card">
+              <div class="specialized-card-top">
+                <div class="specialized-icon" style="background: rgba(55, 118, 171, 0.15); color: #38bdf8; border: 1px solid rgba(55, 118, 171, 0.3);">
+                  <i class="fab fa-python"></i>
+                </div>
+                <div>
+                  <h4 class="specialized-card-title">Python / Data Resume</h4>
+                </div>
+              </div>
+              <p class="specialized-card-desc">Python, Pandas, NumPy, Scikit-Learn, Data Analysis & ML</p>
+              <div class="specialized-card-action">
+                <a href="resumes/python-data-resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-view-resume" aria-label="View Python Data Resume">
+                  <i class="fas fa-file-pdf"></i> View Resume
+                </a>
+              </div>
+            </div>
+
+            <!-- Card 6: Cybersecurity / Networking -->
+            <div class="specialized-card glass-card">
+              <div class="specialized-card-top">
+                <div class="specialized-icon" style="background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.3);">
+                  <i class="fas fa-shield-alt"></i>
+                </div>
+                <div>
+                  <h4 class="specialized-card-title">Cybersecurity / Networking Resume</h4>
+                </div>
+              </div>
+              <p class="specialized-card-desc">Cybersecurity, Ethical Hacking, CCNA, Networking & Security</p>
+              <div class="specialized-card-action">
+                <a href="resumes/cybersecurity-resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-view-resume" aria-label="View Cybersecurity Networking Resume">
+                  <i class="fas fa-file-pdf"></i> View Resume
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
