@@ -304,7 +304,7 @@ function initCertificatesFilter() {
 
       if (matchCategory && matchCompany) {
         card.style.display = 'flex';
-        card.style.animation = 'fadeIn 0.35s ease forwards';
+        card.style.animation = 'fadeIn 0.3s ease forwards';
         visibleCount++;
       } else {
         card.style.display = 'none';
@@ -350,26 +350,38 @@ function initCertificatesFilter() {
 
   // Category buttons click handler
   categoryBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
       categoryBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       currentCategory = btn.dataset.certFilter;
+      
+      // When switching category directly, reset company to 'all' so category results aren't blocked
+      currentCompany = 'all';
+      companyBtns.forEach(b => b.classList.toggle('active', b.dataset.companyFilter === 'all'));
+      
       applyFilters();
     });
   });
 
   // Company buttons click handler
   companyBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
       companyBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       currentCompany = btn.dataset.companyFilter;
+      
+      // When selecting a company, reset category to 'all' so all company credentials display immediately
+      currentCategory = 'all';
+      categoryBtns.forEach(b => b.classList.toggle('active', b.dataset.certFilter === 'all'));
+      
       applyFilters();
     });
   });
 
-  if (resetBtn) resetBtn.addEventListener('click', resetAll);
-  if (emptyResetBtn) emptyResetBtn.addEventListener('click', resetAll);
+  if (resetBtn) resetBtn.addEventListener('click', (e) => { e.preventDefault(); resetAll(); });
+  if (emptyResetBtn) emptyResetBtn.addEventListener('click', (e) => { e.preventDefault(); resetAll(); });
 }
 
 /* --------------------------------------------------------------------------
