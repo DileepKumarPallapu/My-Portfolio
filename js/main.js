@@ -427,7 +427,7 @@ function initCounterAnimations() {
 }
 
 /* --------------------------------------------------------------------------
-   8. Contact Form Handling
+   8. Contact Form Handling — Verified Transmission Engine & Real Feedback
    -------------------------------------------------------------------------- */
 function initContactForm() {
   const form = document.getElementById('contact-form');
@@ -436,121 +436,162 @@ function initContactForm() {
 
   if (!form) return;
 
-  // EmailJS Configuration
-  const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY"; // Replace with your EmailJS Public Key from emailjs.com
-  const EMAILJS_SERVICE_ID = "service_portfolio";
-  const EMAILJS_TEMPLATE_ID = "template_contact";
+  const nameInput = document.getElementById('form-name');
+  const emailInput = document.getElementById('form-email');
+  const subjectInput = document.getElementById('form-subject');
+  const messageInput = document.getElementById('form-message');
 
-  if (window.emailjs && EMAILJS_PUBLIC_KEY !== "YOUR_PUBLIC_KEY") {
-    emailjs.init(EMAILJS_PUBLIC_KEY);
-  }
+  // Input event listeners to clear error states as user types
+  [
+    { input: nameInput, group: 'group-name' },
+    { input: emailInput, group: 'group-email' },
+    { input: subjectInput, group: 'group-subject' },
+    { input: messageInput, group: 'group-message' }
+  ].forEach(({ input, group }) => {
+    if (input) {
+      input.addEventListener('input', () => {
+        const grpEl = document.getElementById(group);
+        if (grpEl) grpEl.classList.remove('has-error');
+      });
+    }
+  });
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    const name = document.getElementById('form-name').value.trim();
-    const email = document.getElementById('form-email').value.trim();
-    const subject = document.getElementById('form-subject').value.trim();
-    const message = document.getElementById('form-message').value.trim();
+    const name = nameInput ? nameInput.value.trim() : '';
+    const email = emailInput ? emailInput.value.trim() : '';
+    const subject = subjectInput ? subjectInput.value.trim() : '';
+    const message = messageInput ? messageInput.value.trim() : '';
 
-    if (!name || !email || !subject || !message) {
-      showToast('Please fill out all required fields.', 'error');
+    let hasError = false;
+
+    // Reset previous errors
+    ['group-name', 'group-email', 'group-subject', 'group-message'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.classList.remove('has-error');
+    });
+    if (statusAlert) {
+      statusAlert.className = 'form-alert';
+      statusAlert.style.display = 'none';
+      statusAlert.innerHTML = '';
+    }
+
+    // Validation
+    if (!name || name.length < 2) {
+      document.getElementById('group-name')?.classList.add('has-error');
+      hasError = true;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email || !emailRegex.test(email)) {
+      document.getElementById('group-email')?.classList.add('has-error');
+      hasError = true;
+    }
+
+    if (!subject || subject.length < 3) {
+      document.getElementById('group-subject')?.classList.add('has-error');
+      hasError = true;
+    }
+
+    if (!message || message.length < 10) {
+      document.getElementById('group-message')?.classList.add('has-error');
+      hasError = true;
+    }
+
+    if (hasError) {
+      showToast('Please correct the highlighted fields before submitting.', 'error');
       return;
     }
 
     // Set UI loading state
     const originalBtnContent = submitBtn.innerHTML;
     submitBtn.disabled = true;
-    submitBtn.innerHTML = `<i class="fas fa-circle-notch fa-spin"></i> Sending Message...`;
-
-    if (statusAlert) statusAlert.style.display = 'none';
+    submitBtn.innerHTML = '<i class="fas fa-circle-notch fa-spin"></i> <span>Sending Message...</span>';
 
     try {
-      if (window.emailjs && EMAILJS_PUBLIC_KEY !== "YOUR_PUBLIC_KEY") {
-        // Send email using EmailJS SDK
-        await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
-          from_name: name,
-          from_email: email,
-          reply_to: email,
-          to_name: "Pallapu Dileep Kumar",
-          to_email: "dileepkumarpallapu28@gmail.com",
-          subject: subject,
-          message: message
-        });
+      const payload = {
+        name: name,
+        email: email,
+        _replyto: email,
+        subject: subject,
+        message: message,
+        _template: "table"
+      };
 
-        showToast('Message sent successfully!', 'success');
+      const endpoint = form.getAttribute('action') || 'https://formsubmit.co/ajax/dileepkumarpallapu28@gmail.com';
+
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      });
+
+      const data = await response.json().catch(() => null);
+
+      if (response.ok && (!data || data.success === 'true' || data.success === true || response.status === 200)) {
+        showToast('Message transmitted successfully!', 'success');
         if (statusAlert) {
+          statusAlert.className = 'form-alert is-success';
           statusAlert.style.display = 'block';
-          statusAlert.style.background = 'rgba(16, 185, 129, 0.15)';
-          statusAlert.style.border = '1px solid rgba(16, 185, 129, 0.4)';
-          statusAlert.style.color = '#10b981';
           statusAlert.innerHTML = `
-            <strong><i class="fas fa-check-circle"></i> Message Sent Successfully!</strong><br>
-            Thank you <strong>${name}</strong>! Your message has been sent directly to <strong>dileepkumarpallapu28@gmail.com</strong>.
+            <div style="display: flex; items-start; gap: 0.75rem;">
+              <i class="fas fa-check-circle" style="font-size: 1.25rem; margin-top: 0.15rem; flex-shrink: 0;"></i>
+              <div>
+                <strong>Message Dispatched Successfully!</strong><br>
+                Thank you <strong>${escapeHtml(name)}</strong>. Your inquiry has been routed to <strong>dileepkumarpallapu28@gmail.com</strong>. I will review and reply to <strong>${escapeHtml(email)}</strong> shortly.
+              </div>
+            </div>
           `;
         }
         form.reset();
       } else {
-        // Fallback HTTP POST / mailto trigger
-        const formData = new FormData(form);
-        const response = await fetch(form.action, {
-          method: 'POST',
-          body: formData,
-          headers: { 'Accept': 'application/json' }
-        });
-
-        if (response.ok) {
-          showToast('Message sent successfully!', 'success');
-          if (statusAlert) {
-            statusAlert.style.display = 'block';
-            statusAlert.style.background = 'rgba(16, 185, 129, 0.15)';
-            statusAlert.style.border = '1px solid rgba(16, 185, 129, 0.4)';
-            statusAlert.style.color = '#10b981';
-            statusAlert.innerHTML = `
-              <strong><i class="fas fa-check-circle"></i> Message Sent Successfully!</strong><br>
-              Thank you <strong>${name}</strong>! Your message has been sent directly to <strong>dileepkumarpallapu28@gmail.com</strong>.
-            `;
-          }
-          form.reset();
-        } else {
-          // Direct Mail Client trigger fallback (Opening client - not claiming delivery until user clicks Send)
-          const mailtoUri = `mailto:dileepkumarpallapu28@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent("From: " + name + " (" + email + ")\n\n" + message)}`;
-          window.open(mailtoUri, '_blank');
-
-          showToast('Email client opened. Please click Send to finish!', 'info');
-          if (statusAlert) {
-            statusAlert.style.display = 'block';
-            statusAlert.style.background = 'rgba(245, 158, 11, 0.12)';
-            statusAlert.style.border = '1px solid rgba(245, 158, 11, 0.35)';
-            statusAlert.style.color = '#f59e0b';
-            statusAlert.innerHTML = `
-              <strong><i class="fas fa-envelope-open-text"></i> Email Application Opened</strong><br>
-              Your default email client has been opened with your message pre-filled. Please review and click <strong>Send</strong> in your mail application to complete delivery to <strong>dileepkumarpallapu28@gmail.com</strong>.
-            `;
-          }
-          form.reset();
-        }
+        throw new Error(data && data.message ? data.message : `HTTP ${response.status}: Delivery service rejected submission.`);
       }
-    } catch (error) {
-      // Direct Mail Client trigger fallback upon network error
-      const mailtoUri = `mailto:dileepkumarpallapu28@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent("From: " + name + " (" + email + ")\n\n" + message)}`;
-      window.open(mailtoUri, '_blank');
-
-      showToast('Email client opened. Please click Send to finish!', 'info');
+    } catch (err) {
+      console.error('Contact Form Transmission Error:', err);
+      showToast('Delivery service unavailable. Opening direct mail option.', 'error');
       if (statusAlert) {
+        const mailtoUri = `mailto:dileepkumarpallapu28@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent("From: " + name + " (" + email + ")\n\n" + message)}`;
+        statusAlert.className = 'form-alert is-error';
         statusAlert.style.display = 'block';
-        statusAlert.style.background = 'rgba(245, 158, 11, 0.12)';
-        statusAlert.style.border = '1px solid rgba(245, 158, 11, 0.35)';
-        statusAlert.style.color = '#f59e0b';
         statusAlert.innerHTML = `
-          <strong><i class="fas fa-envelope-open-text"></i> Email Application Opened</strong><br>
-          Your default email client has been opened with your message pre-filled. Please review and click <strong>Send</strong> in your mail application to complete delivery to <strong>dileepkumarpallapu28@gmail.com</strong>.
+          <div style="display: flex; flex-direction: column; gap: 0.65rem;">
+            <div style="display: flex; items-start; gap: 0.75rem;">
+              <i class="fas fa-exclamation-triangle" style="font-size: 1.2rem; margin-top: 0.15rem; flex-shrink: 0;"></i>
+              <div>
+                <strong>Automated Delivery Interrupted</strong><br>
+                The form service encountered a network error (${escapeHtml(err.message || 'Service offline')}).
+              </div>
+            </div>
+            <div style="margin-top: 0.25rem;">
+              <a href="${mailtoUri}" class="btn btn-secondary" style="display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; padding: 0.45rem 0.9rem; text-decoration: none;">
+                <i class="fas fa-envelope-open-text"></i> Open Message in Mail Client
+              </a>
+            </div>
+          </div>
         `;
       }
-      form.reset();
     } finally {
       submitBtn.disabled = false;
       submitBtn.innerHTML = originalBtnContent;
+    }
+  });
+}
+
+function escapeHtml(str) {
+  if (!str) return '';
+  return str.replace(/[&<>"']/g, function(m) {
+    switch (m) {
+      case '&': return '&amp;';
+      case '<': return '&lt;';
+      case '>': return '&gt;';
+      case '"': return '&quot;';
+      case "'": return '&#39;';
+      default: return m;
     }
   });
 }

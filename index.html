@@ -2768,83 +2768,133 @@
   <section id="contact">
     <div class="container">
       <div class="section-header">
-        <span class="section-badge"><i class="fas fa-envelope"></i> Get In Touch</span>
+        <span class="section-badge"><i class="fas fa-paper-plane" aria-hidden="true"></i> Get In Touch</span>
         <h2 class="section-title">Contact <span class="gradient-text">Me</span></h2>
-        <p class="section-subtitle">Interested in working together or discussing potential software development opportunities? Reach out!</p>
+        <p class="section-subtitle">Interested in working together, discussing software engineering opportunities, or collaborating on distributed systems? Reach out!</p>
       </div>
 
       <div class="contact-grid">
+        <!-- Left Column: Individual Contact Cards + Dedicated Social Section -->
         <div class="contact-info-column">
-          <div class="contact-card-item glass-card">
-            <div class="contact-icon-wrapper"><i class="fas fa-envelope"></i></div>
-            <div class="contact-detail">
-              <h4>Email Address</h4>
-              <a href="mailto:dileepkumarpallapu28@gmail.com">dileepkumarpallapu28@gmail.com</a>
+          <!-- Contact Card 1: Email -->
+          <div class="contact-card glass-card">
+            <div class="contact-icon-wrapper" aria-hidden="true">
+              <i class="fas fa-envelope"></i>
             </div>
-          </div>
-
-          <div class="contact-card-item glass-card">
-            <div class="contact-icon-wrapper"><i class="fas fa-phone-alt"></i></div>
             <div class="contact-detail">
-              <h4>Phone Number</h4>
-              <a href="tel:+916300837459">+91 6300837459</a>
-            </div>
-          </div>
-
-          <div class="contact-card-item glass-card">
-            <div class="contact-icon-wrapper"><i class="fas fa-map-marker-alt"></i></div>
-            <div class="contact-detail">
-              <h4>Location</h4>
-              <p>Chennai, Tamil Nadu, India</p>
-            </div>
-          </div>
-
-          <div class="contact-card-item glass-card" style="flex-direction: column; align-items: flex-start;">
-            <h4 style="margin-bottom: 0.8rem;">Connect on Social Platforms</h4>
-            <div class="social-links">
-              <a href="https://www.linkedin.com/in/dileep-kumar-pallapu" target="_blank" class="social-btn" aria-label="LinkedIn Profile">
-                <i class="fab fa-linkedin-in"></i>
+              <span class="contact-label">EMAIL ADDRESS</span>
+              <a href="mailto:dileepkumarpallapu28@gmail.com" class="contact-value" title="Send email to dileepkumarpallapu28@gmail.com">
+                dileepkumarpallapu28@gmail.com
               </a>
-              <a href="https://github.com/DileepKumarPallapu" target="_blank" class="social-btn" aria-label="GitHub Profile">
-                <i class="fab fa-github"></i>
+            </div>
+          </div>
+
+          <!-- Contact Card 2: Phone -->
+          <div class="contact-card glass-card">
+            <div class="contact-icon-wrapper" aria-hidden="true">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <div class="contact-detail">
+              <span class="contact-label">PHONE NUMBER</span>
+              <a href="tel:+916300837459" class="contact-value" title="Call +91 6300837459">
+                +91 6300837459
               </a>
-              <a href="mailto:dileepkumarpallapu28@gmail.com" class="social-btn" aria-label="Send Email">
-                <i class="fas fa-envelope"></i>
+            </div>
+          </div>
+
+          <!-- Contact Card 3: Location -->
+          <div class="contact-card glass-card">
+            <div class="contact-icon-wrapper" aria-hidden="true">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-detail">
+              <span class="contact-label">CURRENT LOCATION</span>
+              <p class="contact-value">Chennai, Tamil Nadu, India</p>
+            </div>
+          </div>
+
+          <!-- Contact Card 4: Dedicated Social Media Card -->
+          <div class="contact-card contact-social-card glass-card">
+            <div class="social-header">
+              <span class="social-eyebrow">DIGITAL PRESENCE</span>
+              <h4 class="social-title">Connect on Social Platforms</h4>
+            </div>
+            <div class="social-buttons-grid">
+              <a href="https://www.linkedin.com/in/dileep-kumar-pallapu" target="_blank" rel="noopener noreferrer" class="social-chip" aria-label="LinkedIn Profile">
+                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                <span>LinkedIn</span>
+              </a>
+              <a href="https://github.com/DileepKumarPallapu" target="_blank" rel="noopener noreferrer" class="social-chip" aria-label="GitHub Profile">
+                <i class="fab fa-github" aria-hidden="true"></i>
+                <span>GitHub</span>
+              </a>
+              <a href="mailto:dileepkumarpallapu28@gmail.com" class="social-chip" aria-label="Send Direct Email">
+                <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                <span>Direct Mail</span>
               </a>
             </div>
           </div>
         </div>
 
+        <!-- Right Column: Premium Contact Form Card -->
         <div class="contact-form-card glass-card">
-          <form id="contact-form" action="https://formspree.io/f/dileepkumarpallapu28@gmail.com" method="POST">
-            <!-- Hidden configuration for direct mail -->
+          <div class="form-header">
+            <span class="form-eyebrow">INQUIRY DISPATCH</span>
+            <h3 class="form-title">Send a Direct Message</h3>
+            <p class="form-description">Have a project, full-time role, or technical collaboration in mind? Leave a message below and I will respond promptly.</p>
+          </div>
+
+          <form id="contact-form" action="https://formsubmit.co/ajax/dileepkumarpallapu28@gmail.com" method="POST" novalidate>
+            <!-- Hidden configuration for reliable direct mail -->
+            <input type="text" name="_honey" style="display:none !important" tabindex="-1" autocomplete="off">
             <input type="hidden" name="_to" value="dileepkumarpallapu28@gmail.com">
             <input type="hidden" name="_subject" value="New Portfolio Contact Message - Pallapu Dileep Kumar">
+            <input type="hidden" name="_template" value="table">
 
-            <div class="form-group">
-              <label for="form-name" class="form-label">Full Name</label>
-              <input type="text" id="form-name" name="name" class="form-input" placeholder="e.g. John Doe" required>
+            <div class="form-row">
+              <div class="form-group" id="group-name">
+                <label for="form-name" class="form-label">Full Name <span class="required-star">*</span></label>
+                <div class="input-wrapper">
+                  <i class="fas fa-user input-icon" aria-hidden="true"></i>
+                  <input type="text" id="form-name" name="name" class="form-input" placeholder="e.g. John Doe" required autocomplete="name">
+                </div>
+                <span class="form-error-msg" id="name-error">Please enter your full name.</span>
+              </div>
+
+              <div class="form-group" id="group-email">
+                <label for="form-email" class="form-label">Email Address <span class="required-star">*</span></label>
+                <div class="input-wrapper">
+                  <i class="fas fa-at input-icon" aria-hidden="true"></i>
+                  <input type="email" id="form-email" name="email" class="form-input" placeholder="e.g. john@example.com" required autocomplete="email">
+                </div>
+                <span class="form-error-msg" id="email-error">Please enter a valid email address.</span>
+              </div>
             </div>
 
-            <div class="form-group">
-              <label for="form-email" class="form-label">Email Address</label>
-              <input type="email" id="form-email" name="email" class="form-input" placeholder="e.g. john@example.com" required>
+            <div class="form-group" id="group-subject">
+              <label for="form-subject" class="form-label">Subject <span class="required-star">*</span></label>
+              <div class="input-wrapper">
+                <i class="fas fa-tag input-icon" aria-hidden="true"></i>
+                <input type="text" id="form-subject" name="subject" class="form-input" placeholder="e.g. Project Inquiry / Job Opportunity" required>
+              </div>
+              <span class="form-error-msg" id="subject-error">Please enter a subject.</span>
             </div>
 
-            <div class="form-group">
-              <label for="form-subject" class="form-label">Subject</label>
-              <input type="text" id="form-subject" name="subject" class="form-input" placeholder="e.g. Project Inquiry / Job Opportunity" required>
+            <div class="form-group" id="group-message">
+              <label for="form-message" class="form-label">Your Message <span class="required-star">*</span></label>
+              <div class="input-wrapper textarea-wrapper">
+                <i class="fas fa-comment-alt input-icon textarea-icon" aria-hidden="true"></i>
+                <textarea id="form-message" name="message" class="form-textarea" placeholder="Detail your project requirements, timeline, or position details..." required rows="5"></textarea>
+              </div>
+              <span class="form-error-msg" id="message-error">Please write a message (at least 10 characters).</span>
             </div>
 
-            <div class="form-group">
-              <label for="form-message" class="form-label">Your Message</label>
-              <textarea id="form-message" name="message" class="form-textarea" placeholder="Write your message here..." required></textarea>
-            </div>
+            <!-- Dynamic Alert Container for Verified Status Feedback -->
+            <div id="form-status-alert" class="form-alert" role="alert" aria-live="polite"></div>
 
-            <div id="form-status-alert" style="display: none; margin-bottom: 1rem; padding: 1rem; border-radius: var(--radius-sm); font-size: 0.9rem; line-height: 1.5;"></div>
-
-            <button type="submit" id="form-submit-btn" class="btn btn-primary" style="width: 100%;">
-              <i class="fas fa-paper-plane"></i> Send Message
+            <button type="submit" id="form-submit-btn" class="btn btn-primary submit-btn">
+              <span class="btn-text">Send Message</span>
+              <i class="fas fa-arrow-right btn-icon" aria-hidden="true"></i>
             </button>
           </form>
         </div>
