@@ -178,8 +178,13 @@ function initTypingEffect() {
 function initScrollAnimations() {
   const sections = document.querySelectorAll('section');
   const navLinks = document.querySelectorAll('.nav-link');
+  const navbar = document.querySelector('.navbar');
 
   window.addEventListener('scroll', () => {
+    if (navbar) {
+      navbar.classList.toggle('scrolled', window.scrollY > 25);
+    }
+
     let currentSectionId = '';
 
     sections.forEach(section => {
@@ -508,37 +513,38 @@ function initContactForm() {
           }
           form.reset();
         } else {
-          // Direct Mail Client trigger fallback
+          // Direct Mail Client trigger fallback (Opening client - not claiming delivery until user clicks Send)
           const mailtoUri = `mailto:dileepkumarpallapu28@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent("From: " + name + " (" + email + ")\n\n" + message)}`;
           window.open(mailtoUri, '_blank');
 
-          showToast('Direct Mail Client opened!', 'success');
+          showToast('Email client opened. Please click Send to finish!', 'info');
           if (statusAlert) {
             statusAlert.style.display = 'block';
-            statusAlert.style.background = 'rgba(16, 185, 129, 0.15)';
-            statusAlert.style.border = '1px solid rgba(16, 185, 129, 0.4)';
-            statusAlert.style.color = '#10b981';
+            statusAlert.style.background = 'rgba(245, 158, 11, 0.12)';
+            statusAlert.style.border = '1px solid rgba(245, 158, 11, 0.35)';
+            statusAlert.style.color = '#f59e0b';
             statusAlert.innerHTML = `
-              <strong><i class="fas fa-check-circle"></i> Direct Email Application Opened!</strong><br>
-              Thank you <strong>${name}</strong>! Your email client was opened to send your message directly to <strong>dileepkumarpallapu28@gmail.com</strong>.
+              <strong><i class="fas fa-envelope-open-text"></i> Email Application Opened</strong><br>
+              Your default email client has been opened with your message pre-filled. Please review and click <strong>Send</strong> in your mail application to complete delivery to <strong>dileepkumarpallapu28@gmail.com</strong>.
             `;
           }
           form.reset();
         }
       }
     } catch (error) {
+      // Direct Mail Client trigger fallback upon network error
       const mailtoUri = `mailto:dileepkumarpallapu28@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent("From: " + name + " (" + email + ")\n\n" + message)}`;
       window.open(mailtoUri, '_blank');
 
-      showToast('Direct Mail Client opened!', 'success');
+      showToast('Email client opened. Please click Send to finish!', 'info');
       if (statusAlert) {
         statusAlert.style.display = 'block';
-        statusAlert.style.background = 'rgba(16, 185, 129, 0.15)';
-        statusAlert.style.border = '1px solid rgba(16, 185, 129, 0.4)';
-        statusAlert.style.color = '#10b981';
+        statusAlert.style.background = 'rgba(245, 158, 11, 0.12)';
+        statusAlert.style.border = '1px solid rgba(245, 158, 11, 0.35)';
+        statusAlert.style.color = '#f59e0b';
         statusAlert.innerHTML = `
-          <strong><i class="fas fa-check-circle"></i> Direct Email Application Opened!</strong><br>
-          Thank you <strong>${name}</strong>! Your email client was opened to send your message directly to <strong>dileepkumarpallapu28@gmail.com</strong>.
+          <strong><i class="fas fa-envelope-open-text"></i> Email Application Opened</strong><br>
+          Your default email client has been opened with your message pre-filled. Please review and click <strong>Send</strong> in your mail application to complete delivery to <strong>dileepkumarpallapu28@gmail.com</strong>.
         `;
       }
       form.reset();
@@ -553,10 +559,21 @@ function showToast(msg, type = 'success') {
   const container = document.getElementById('toast-container');
   if (!container) return;
 
+  let iconClass = 'fa-check-circle';
+  let iconColor = '#10b981';
+
+  if (type === 'error') {
+    iconClass = 'fa-exclamation-circle';
+    iconColor = '#ef4444';
+  } else if (type === 'info') {
+    iconClass = 'fa-info-circle';
+    iconColor = '#38bdf8';
+  }
+
   const toast = document.createElement('div');
   toast.className = 'toast';
   toast.innerHTML = `
-    <i class="fas ${type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle'}" style="color: ${type === 'success' ? '#10b981' : '#ef4444'}"></i>
+    <i class="fas ${iconClass}" style="color: ${iconColor}; font-size: 1.1rem;"></i>
     <span>${msg}</span>
   `;
 
@@ -576,15 +593,28 @@ function initMobileMenu() {
 
   if (!hamburger || !mobileMenu) return;
 
-  hamburger.addEventListener('click', () => {
+  hamburger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    hamburger.classList.toggle('active');
     mobileMenu.classList.toggle('open');
+    mobileMenu.classList.toggle('active');
   });
 
   const mobileLinks = mobileMenu.querySelectorAll('a');
   mobileLinks.forEach(link => {
     link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
       mobileMenu.classList.remove('open');
+      mobileMenu.classList.remove('active');
     });
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!mobileMenu.contains(e.target) && !hamburger.contains(e.target)) {
+      hamburger.classList.remove('active');
+      mobileMenu.classList.remove('open');
+      mobileMenu.classList.remove('active');
+    }
   });
 }
 
@@ -608,6 +638,12 @@ function initModals() {
     }
   });
 
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modalOverlay.classList.contains('open')) {
+      modalOverlay.classList.remove('open');
+    }
+  });
+
   window.openCertModal = function(title, issuer, date, desc, imgSrc = null, credlyUrl = null) {
     // Generate unique credential code based on issuer & title hash
     const codeHash = Math.abs(title.split('').reduce((acc, char) => (acc << 5) - acc + char.charCodeAt(0), 0)).toString(16).toUpperCase().padStart(8, '0');
@@ -615,7 +651,7 @@ function initModals() {
     const credentialID = `CERT-${issuerTag}-${date}-${codeHash.substring(0, 6)}`;
 
     // Issuer color theme
-    const themeColor = issuer.includes('MongoDB') ? '#13aa52' : (issuer.includes('Cisco') ? '#38bdf8' : (issuer.includes('Oracle') ? '#f87171' : '#60a5fa'));
+    const themeColor = issuer.includes('MongoDB') ? '#13aa52' : (issuer.includes('Cisco') ? '#38bdf8' : (issuer.includes('Oracle') ? '#f87171' : (issuer.includes('Meta') ? '#0064e0' : '#8b5cf6')));
 
     const imageHtml = imgSrc ? `
       <div style="margin-bottom: 1.2rem; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-color); box-shadow: var(--glass-shadow);">
@@ -623,9 +659,10 @@ function initModals() {
       </div>
     ` : '';
 
+    const verifyBtnLabel = credlyUrl && credlyUrl.includes('coursera') ? 'Verify on Coursera' : (credlyUrl && credlyUrl.includes('credly') ? 'Verify on Credly' : 'Official Verification Link');
     const credlyBtnHtml = credlyUrl ? `
-      <a href="${credlyUrl}" target="_blank" class="btn btn-primary btn-sm" style="background: linear-gradient(135deg, #13aa52, #116149);">
-        <i class="fas fa-external-link-alt"></i> Verify on Credly
+      <a href="${credlyUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="background: linear-gradient(135deg, ${themeColor}, #2563eb);">
+        <i class="fas fa-external-link-alt"></i> ${verifyBtnLabel}
       </a>
     ` : '';
 
